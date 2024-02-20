@@ -1,7 +1,4 @@
-//import "package:drfungus_app/screens/bugs.dart";
 import "package:drfungus_app/screens/datalist.dart";
-//import "package:drfungus_app/screens/drugs.dart";
-//import "package:drfungus_app/screens/trials.dart";
 import "package:drfungus_app/widgets/menubutton.dart";
 import "package:flutter/material.dart";
 import "package:drfungus_app/data/data.dart";
