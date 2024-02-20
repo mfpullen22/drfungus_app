@@ -1,8 +1,10 @@
-import "package:drfungus_app/screens/bugs.dart";
-import "package:drfungus_app/screens/drugs.dart";
-import "package:drfungus_app/screens/trials.dart";
+//import "package:drfungus_app/screens/bugs.dart";
+import "package:drfungus_app/screens/datalist.dart";
+//import "package:drfungus_app/screens/drugs.dart";
+//import "package:drfungus_app/screens/trials.dart";
 import "package:drfungus_app/widgets/menubutton.dart";
 import "package:flutter/material.dart";
+import "package:drfungus_app/data/data.dart";
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -37,9 +39,18 @@ class HomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const BugsScreen()),
+                        builder: (context) => const DataListScreen(
+                          title: "Fungi",
+                          data: bugs,
+                        ),
+                      ),
                     );
                   },
+                ),
+                const SizedBox(height: 20),
+                MenuButton(
+                  title: "Syndromes",
+                  onSelectMenu: () {},
                 ),
                 const SizedBox(height: 20),
                 MenuButton(
@@ -48,9 +59,18 @@ class HomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const DrugsScreen()),
+                        builder: (context) => const DataListScreen(
+                          title: "Medications",
+                          data: drugs,
+                        ),
+                      ),
                     );
                   },
+                ),
+                const SizedBox(height: 20),
+                MenuButton(
+                  title: "Guidelines",
+                  onSelectMenu: () {},
                 ),
                 const SizedBox(height: 20),
                 MenuButton(
@@ -59,10 +79,15 @@ class HomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const TrialsScreen()),
+                        builder: (context) => const DataListScreen(
+                          title: "Clinical Trials",
+                          data: trials,
+                        ),
+                      ),
                     );
                   },
                 ),
+                const SizedBox(height: 20),
               ],
             ),
           ),

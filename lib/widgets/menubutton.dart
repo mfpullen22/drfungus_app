@@ -20,8 +20,11 @@ class MenuButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           gradient: LinearGradient(
             colors: [
-              Theme.of(context).colorScheme.secondaryContainer,
-              Theme.of(context).colorScheme.tertiaryContainer,
+              Theme.of(context)
+                  .colorScheme
+                  .secondaryContainer
+                  .withOpacity(0.55),
+              Theme.of(context).colorScheme.tertiaryContainer.withOpacity(0.9),
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
