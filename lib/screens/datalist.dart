@@ -12,18 +12,22 @@ class DataListScreen extends StatelessWidget {
     Widget content = ListView.builder(
       itemCount: data.length,
       itemBuilder: (context, index) {
-        return ListTile(
-          title: Text(data[index].name),
-          onTap: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (ctx) => ItemDetailsScreen(
-                  name: data[index].name,
-                  data: data[index],
+        return Padding(
+          padding: const EdgeInsets.all(2.0),
+          child: ListTile(
+            tileColor: Theme.of(context).colorScheme.secondaryContainer,
+            title: Text(data[index].name),
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (ctx) => ItemDetailsScreen(
+                    name: data[index].name,
+                    data: data[index],
+                  ),
                 ),
-              ),
-            );
-          },
+              );
+            },
+          ),
         );
       },
     );

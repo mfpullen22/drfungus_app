@@ -1,6 +1,7 @@
 //import 'package:drfungus_app/screens/home_page.dart';
 import 'package:drfungus_app/screens/tabs.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 final theme = ThemeData(
   useMaterial3: true,
@@ -8,6 +9,7 @@ final theme = ThemeData(
     brightness: Brightness.dark,
     seedColor: const Color.fromARGB(255, 17, 75, 95),
   ),
+  textTheme: GoogleFonts.latoTextTheme(),
 );
 void main() {
   runApp(

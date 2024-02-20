@@ -29,7 +29,7 @@ const bugs = [
 ];
 const drugs = [
   Drug(
-    name: "Voriconazole",
+    name: "Voriconazole (Vfend)",
     mechanism:
         "As with all azole antifungal agents, voriconazole works principally by inhibition of cytochrome P450 14a-demethylase. This enzyme is in the sterol biosynthesis pathway that leads from lanosterol to ergosterol [1674, 1735]. Compared to fluconazole, voriconazole inhibits P45014DM to a greater extend. This inhibition is dose-dependent.",
     susceptibility:
@@ -46,18 +46,21 @@ const trials = [
   Trial(
       name: "Prospective Nationwide Online Registry of Endemic Mycoses",
       organization: "University of Minnesota",
+      principal: "Dr. Matthew Pullen MD",
       description:
           "Endemic mycoses are a group of 7 important infections caused by thermally dimorphic fungi that are globally distributed based on specific environmental niches. Of these, histoplasmosis, blastomycosis, and coccidioidomycosis are highly endemic in the United States. Recent data suggest that their incidences are rising and their geographic ranges are expanding; however, as these infections are not reportable, significant gaps exist in current knowledge of disease burden, geographic distribution, antifungal effectiveness, and long-term outcomes of patients.\n\nWe aim to create the first-ever Prospective Nationwide Online Registry of Endemic Mycoses, collecting unprecedented data on risk factors and patient reported outcomes from a geographically diverse populace throughout the United States. Using an internet-based approach, we will prospectively enroll persons with laboratory-confirmed endemic mycoses, utilizing a combination of physician networks, social media, and digital media outreach. We will leverage our experience in leading multiple nationwide COVID-19 virtual clinical trials to successfully engage research volunteers and physicians as stakeholders in participatory research so as to inform improved treatment strategies for endemic mycoses.\n\nSpecific Aim 1. To develop and maintain an electronic database of an internet-based, prospective nationwide cohort of patient-reported clinical outcomes for the endemic mycoses histoplasmosis, blastomycosis, and coccidioidomycosis.\n\nSpecific Aim 2. To determine the clinical effectiveness of consolidation therapy with itraconazole versus alternative azoles, as well as determine the risk factors for therapeutic failure or intolerance of consolidation therapy.\n\nSpecific Aim 3. To determine if mutations in the STAT1, STAT3, DECTIN-1, and IFNGR1 pathways confer increased risk of severe endemic mycoses infection as compared with mild/moderate severity.\n\nImpact: We expect that our internet-based registry will allow us to better define the incidence and geography of these endemic mycoses as well as the long-term outcomes and impact on the quality of life of patients. We expect to generate data on real-world effectiveness of itraconazole versus alternative azoles during consolidation and maintenance therapy to inform treatment guidelines and future randomized clinical trials for endemic mycoses therapy. We expect to identify clinical and host genetic risk factors associated with severe disease and therapeutic failure to improve clinical management and inform disease control strategies. Finally, we hope to maintain the endemic mycoses registry and the biorepository beyond the funding period, providing robust resources to advance the research agenda.",
       url: "https://www.mycoses.org"),
   Trial(
       name: "Totally Not Dummy Data",
       organization: "University of Saskatoon",
+      principal: "Dr. Acula MD",
       description:
           "This study proposes to give every person admitted to the ICU high-dose amphotericin just to see what will happen.",
       url: "https://www.google.com"),
   Trial(
       name: "Totally Not More Dummy Data",
       organization: "University of Wonka",
+      principal: "Dr. Charles Wonka MD",
       description:
           "This study proposes to try varying doses of milk, dark, and white chocolate for various endemic mycoses. Surely one of them will work!",
       url: "https://www.wonka.com"),
