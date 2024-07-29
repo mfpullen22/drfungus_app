@@ -35,138 +35,141 @@ class HomePage extends StatelessWidget {
               flex: 8,
               child: Container(
                 color: Colors.white,
-                child: Column(
-                  children: [
-                    Expanded(
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: AspectRatio(
-                              aspectRatio: 1.0,
-                              child: ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  elevation: 4,
-                                  shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius
-                                        .zero, // Makes the buttons square
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Expanded(
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: AspectRatio(
+                                aspectRatio: 1.0,
+                                child: ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    elevation: 4,
+                                    shape: const RoundedRectangleBorder(
+                                      borderRadius: BorderRadius
+                                          .zero, // Makes the buttons square
+                                    ),
                                   ),
-                                ),
-                                child: const Center(
-                                  child: Text("Button 1"),
+                                  child: const Center(
+                                    child: Text("Button 1"),
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          const SizedBox(width: 16),
-                          Expanded(
-                            child: AspectRatio(
-                              aspectRatio: 1.0,
-                              child: ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  elevation: 4,
-                                  shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius
-                                        .zero, // Makes the buttons square
+                            const SizedBox(width: 16),
+                            Expanded(
+                              child: AspectRatio(
+                                aspectRatio: 1.0,
+                                child: ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    elevation: 4,
+                                    shape: const RoundedRectangleBorder(
+                                      borderRadius: BorderRadius
+                                          .zero, // Makes the buttons square
+                                    ),
                                   ),
-                                ),
-                                child: const Center(
-                                  child: Text("Button 2"),
+                                  child: const Center(
+                                    child: Text("Button 2"),
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                    Expanded(
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: AspectRatio(
-                              aspectRatio: 1.0,
-                              child: ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  elevation: 4,
-                                  shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius
-                                        .zero, // Makes the buttons square
+                      Expanded(
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: AspectRatio(
+                                aspectRatio: 1.0,
+                                child: ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    elevation: 4,
+                                    shape: const RoundedRectangleBorder(
+                                      borderRadius: BorderRadius
+                                          .zero, // Makes the buttons square
+                                    ),
                                   ),
-                                ),
-                                child: const Center(
-                                  child: Text("Button 3"),
+                                  child: const Center(
+                                    child: Text("Button 3"),
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          const SizedBox(width: 16),
-                          Expanded(
-                            child: AspectRatio(
-                              aspectRatio: 1.0,
-                              child: ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  elevation: 4,
-                                  shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius
-                                        .zero, // Makes the buttons square
+                            const SizedBox(width: 16),
+                            Expanded(
+                              child: AspectRatio(
+                                aspectRatio: 1.0,
+                                child: ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    elevation: 4,
+                                    shape: const RoundedRectangleBorder(
+                                      borderRadius: BorderRadius
+                                          .zero, // Makes the buttons square
+                                    ),
                                   ),
-                                ),
-                                child: const Center(
-                                  child: Text("Button 4"),
+                                  child: const Center(
+                                    child: Text("Button 4"),
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                    Expanded(
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: AspectRatio(
-                              aspectRatio: 1.0,
-                              child: ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  elevation: 4,
-                                  shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius
-                                        .zero, // Makes the buttons square
+                      Expanded(
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: AspectRatio(
+                                aspectRatio: 1.0,
+                                child: ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    elevation: 4,
+                                    shape: const RoundedRectangleBorder(
+                                      borderRadius: BorderRadius
+                                          .zero, // Makes the buttons square
+                                    ),
                                   ),
-                                ),
-                                child: const Center(
-                                  child: Text("Button 5"),
+                                  child: const Center(
+                                    child: Text("Button 5"),
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          const SizedBox(width: 16),
-                          Expanded(
-                            child: AspectRatio(
-                              aspectRatio: 1.0,
-                              child: ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  elevation: 4,
-                                  shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius
-                                        .zero, // Makes the buttons square
+                            const SizedBox(width: 16),
+                            Expanded(
+                              child: AspectRatio(
+                                aspectRatio: 1.0,
+                                child: ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    elevation: 4,
+                                    shape: const RoundedRectangleBorder(
+                                      borderRadius: BorderRadius
+                                          .zero, // Makes the buttons square
+                                    ),
                                   ),
-                                ),
-                                child: const Center(
-                                  child: Text("Button 6"),
+                                  child: const Center(
+                                    child: Text("Button 6"),
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
