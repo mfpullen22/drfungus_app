@@ -10,7 +10,174 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Container(
+        body: Column(
+          children: [
+            Expanded(
+              flex: 2,
+              child: Container(
+                height: MediaQuery.of(context).size.height * 0.2,
+                color: const Color.fromRGBO(21, 40, 77, 1),
+                child: Padding(
+                  padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).padding.top,
+                  ),
+                  child: Center(
+                    child: Image.asset(
+                      "assets/images/logo_bgless.png",
+                      fit: BoxFit.cover,
+                      width: MediaQuery.of(context).size.width * 0.9,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 8,
+              child: Container(
+                color: Colors.white,
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: AspectRatio(
+                              aspectRatio: 1.0,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  elevation: 4,
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius
+                                        .zero, // Makes the buttons square
+                                  ),
+                                ),
+                                child: const Center(
+                                  child: Text("Button 1"),
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: AspectRatio(
+                              aspectRatio: 1.0,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  elevation: 4,
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius
+                                        .zero, // Makes the buttons square
+                                  ),
+                                ),
+                                child: const Center(
+                                  child: Text("Button 2"),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: AspectRatio(
+                              aspectRatio: 1.0,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  elevation: 4,
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius
+                                        .zero, // Makes the buttons square
+                                  ),
+                                ),
+                                child: const Center(
+                                  child: Text("Button 3"),
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: AspectRatio(
+                              aspectRatio: 1.0,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  elevation: 4,
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius
+                                        .zero, // Makes the buttons square
+                                  ),
+                                ),
+                                child: const Center(
+                                  child: Text("Button 4"),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: AspectRatio(
+                              aspectRatio: 1.0,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  elevation: 4,
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius
+                                        .zero, // Makes the buttons square
+                                  ),
+                                ),
+                                child: const Center(
+                                  child: Text("Button 5"),
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: AspectRatio(
+                              aspectRatio: 1.0,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  elevation: 4,
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius
+                                        .zero, // Makes the buttons square
+                                  ),
+                                ),
+                                child: const Center(
+                                  child: Text("Button 6"),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+/* 
+Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
@@ -88,8 +255,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-        ),
-      ),
-    );
-  }
-}
+        ), */
+
+
+                          

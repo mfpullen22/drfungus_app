@@ -39,9 +39,11 @@ class _TabsScreenState extends State<TabsScreen> {
     }
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(activePageTitle),
-      ),
+      appBar: activePageTitle == "Doctor Fungus"
+          ? null
+          : AppBar(
+              title: Text(activePageTitle),
+            ),
       body: activePage,
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
