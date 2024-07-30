@@ -1,7 +1,16 @@
-//import "package:drfungus_app/screens/datalist.dart";
+import "package:drfungus_app/screens/datalist.dart";
 //import "package:drfungus_app/widgets/menubutton.dart";
 import "package:flutter/material.dart";
-//import "package:drfungus_app/data/data.dart";
+import "package:drfungus_app/data/data.dart";
+import 'package:url_launcher/url_launcher.dart';
+
+void _launchURL(String url) async {
+  if (await canLaunchUrl(Uri.parse(url))) {
+    await launchUrl(Uri.parse(url));
+  } else {
+    throw 'Could not launch $url';
+  }
+}
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -46,7 +55,18 @@ class HomePage extends StatelessWidget {
                               child: AspectRatio(
                                 aspectRatio: 1.0,
                                 child: ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const DataListScreen(
+                                          title: "Fungi",
+                                          data: bugs,
+                                        ),
+                                      ),
+                                    );
+                                  },
                                   style: ElevatedButton.styleFrom(
                                     elevation: 4,
                                     backgroundColor: const Color.fromARGB(
@@ -81,7 +101,18 @@ class HomePage extends StatelessWidget {
                               child: AspectRatio(
                                 aspectRatio: 1.0,
                                 child: ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const DataListScreen(
+                                          title: "Medications",
+                                          data: drugs,
+                                        ),
+                                      ),
+                                    );
+                                  },
                                   style: ElevatedButton.styleFrom(
                                     elevation: 4,
                                     backgroundColor: const Color.fromARGB(
@@ -121,7 +152,18 @@ class HomePage extends StatelessWidget {
                               child: AspectRatio(
                                 aspectRatio: 1.0,
                                 child: ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const DataListScreen(
+                                          title: "Mycoses",
+                                          data: mycoses,
+                                        ),
+                                      ),
+                                    );
+                                  },
                                   style: ElevatedButton.styleFrom(
                                     elevation: 4,
                                     backgroundColor: const Color.fromARGB(
@@ -196,7 +238,18 @@ class HomePage extends StatelessWidget {
                               child: AspectRatio(
                                 aspectRatio: 1.0,
                                 child: ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const DataListScreen(
+                                          title: "Clinical Trials",
+                                          data: trials,
+                                        ),
+                                      ),
+                                    );
+                                  },
                                   style: ElevatedButton.styleFrom(
                                     elevation: 4,
                                     backgroundColor: const Color.fromARGB(
@@ -231,7 +284,9 @@ class HomePage extends StatelessWidget {
                               child: AspectRatio(
                                 aspectRatio: 1.0,
                                 child: ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    _launchURL('https://msgerc.org/');
+                                  },
                                   style: ElevatedButton.styleFrom(
                                     elevation: 4,
                                     backgroundColor: const Color.fromARGB(

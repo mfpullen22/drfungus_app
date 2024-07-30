@@ -65,3 +65,5 @@ const trials = [
           "This study proposes to try varying doses of milk, dark, and white chocolate for various endemic mycoses. Surely one of them will work!",
       url: "https://www.wonka.com"),
 ];
+
+const mycoses = [];

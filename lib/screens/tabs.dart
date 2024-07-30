@@ -36,6 +36,11 @@ class _TabsScreenState extends State<TabsScreen> {
         data: drugs,
       );
       activePageTitle = "Medications";
+    } else if (_selectedPageIndex == 3) {
+      activePage = const DataListScreen(
+        data: bugs,
+      );
+      activePageTitle = "Mycoses";
     }
 
     return Scaffold(
@@ -46,12 +51,16 @@ class _TabsScreenState extends State<TabsScreen> {
             ),
       body: activePage,
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         onTap: _selectPage,
         currentIndex: _selectedPageIndex,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.biotech), label: "Fungi"),
-          BottomNavigationBarItem(icon: Icon(Icons.medication), label: "Drugs"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.medication), label: "Medications"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.medication), label: "Mycoses"),
         ],
       ),
     );
