@@ -1,7 +1,7 @@
-import "package:drfungus_app/screens/datalist.dart";
-import "package:drfungus_app/widgets/menubutton.dart";
+//import "package:drfungus_app/screens/datalist.dart";
+//import "package:drfungus_app/widgets/menubutton.dart";
 import "package:flutter/material.dart";
-import "package:drfungus_app/data/data.dart";
+//import "package:drfungus_app/data/data.dart";
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -49,13 +49,29 @@ class HomePage extends StatelessWidget {
                                   onPressed: () {},
                                   style: ElevatedButton.styleFrom(
                                     elevation: 4,
-                                    shape: const RoundedRectangleBorder(
-                                      borderRadius: BorderRadius
-                                          .zero, // Makes the buttons square
+                                    backgroundColor: const Color.fromARGB(
+                                        255, 230, 237, 240),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(
+                                          12), // Makes the buttons square
                                     ),
                                   ),
                                   child: const Center(
-                                    child: Text("Button 1"),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Icon(Icons.hub,
+                                            color:
+                                                Color.fromRGBO(21, 40, 77, 1),
+                                            size: 48),
+                                        Text("Fungi",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                color: Color.fromRGBO(
+                                                    21, 40, 77, 1))),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -68,13 +84,29 @@ class HomePage extends StatelessWidget {
                                   onPressed: () {},
                                   style: ElevatedButton.styleFrom(
                                     elevation: 4,
-                                    shape: const RoundedRectangleBorder(
-                                      borderRadius: BorderRadius
-                                          .zero, // Makes the buttons square
+                                    backgroundColor: const Color.fromARGB(
+                                        255, 230, 237, 240),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(
+                                          12), // Makes the buttons square
                                     ),
                                   ),
                                   child: const Center(
-                                    child: Text("Button 2"),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Icon(Icons.medication,
+                                            color:
+                                                Color.fromRGBO(21, 40, 77, 1),
+                                            size: 48),
+                                        Text("Medications",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                color: Color.fromRGBO(
+                                                    21, 40, 77, 1))),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -92,13 +124,29 @@ class HomePage extends StatelessWidget {
                                   onPressed: () {},
                                   style: ElevatedButton.styleFrom(
                                     elevation: 4,
-                                    shape: const RoundedRectangleBorder(
-                                      borderRadius: BorderRadius
-                                          .zero, // Makes the buttons square
+                                    backgroundColor: const Color.fromARGB(
+                                        255, 230, 237, 240),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(
+                                          12), // Makes the buttons square
                                     ),
                                   ),
                                   child: const Center(
-                                    child: Text("Button 3"),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Icon(Icons.medical_information,
+                                            color:
+                                                Color.fromRGBO(21, 40, 77, 1),
+                                            size: 48),
+                                        Text("Mycoses",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                color: Color.fromRGBO(
+                                                    21, 40, 77, 1))),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -111,13 +159,29 @@ class HomePage extends StatelessWidget {
                                   onPressed: () {},
                                   style: ElevatedButton.styleFrom(
                                     elevation: 4,
-                                    shape: const RoundedRectangleBorder(
-                                      borderRadius: BorderRadius
-                                          .zero, // Makes the buttons square
+                                    backgroundColor: const Color.fromARGB(
+                                        255, 230, 237, 240),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(
+                                          12), // Makes the buttons square
                                     ),
                                   ),
                                   child: const Center(
-                                    child: Text("Button 4"),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Icon(Icons.question_answer,
+                                            color:
+                                                Color.fromRGBO(21, 40, 77, 1),
+                                            size: 48),
+                                        Text("Ask Dr. Fungus",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                color: Color.fromRGBO(
+                                                    21, 40, 77, 1))),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -135,13 +199,29 @@ class HomePage extends StatelessWidget {
                                   onPressed: () {},
                                   style: ElevatedButton.styleFrom(
                                     elevation: 4,
-                                    shape: const RoundedRectangleBorder(
-                                      borderRadius: BorderRadius
-                                          .zero, // Makes the buttons square
+                                    backgroundColor: const Color.fromARGB(
+                                        255, 230, 237, 240),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(
+                                          12), // Makes the buttons square
                                     ),
                                   ),
                                   child: const Center(
-                                    child: Text("Button 5"),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Icon(Icons.biotech,
+                                            color:
+                                                Color.fromRGBO(21, 40, 77, 1),
+                                            size: 48),
+                                        Text("Research",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                color: Color.fromRGBO(
+                                                    21, 40, 77, 1))),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -154,13 +234,29 @@ class HomePage extends StatelessWidget {
                                   onPressed: () {},
                                   style: ElevatedButton.styleFrom(
                                     elevation: 4,
-                                    shape: const RoundedRectangleBorder(
-                                      borderRadius: BorderRadius
-                                          .zero, // Makes the buttons square
+                                    backgroundColor: const Color.fromARGB(
+                                        255, 230, 237, 240),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(
+                                          12), // Makes the buttons square
                                     ),
                                   ),
                                   child: const Center(
-                                    child: Text("Button 6"),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Icon(Icons.person_add,
+                                            color:
+                                                Color.fromRGBO(21, 40, 77, 1),
+                                            size: 48),
+                                        Text("Join MSG",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                color: Color.fromRGBO(
+                                                    21, 40, 77, 1))),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
