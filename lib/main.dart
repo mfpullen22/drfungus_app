@@ -1,4 +1,6 @@
-//import 'package:drfungus_app/screens/home_page.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 import 'package:drfungus_app/screens/tabs.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -11,7 +13,15 @@ final theme = ThemeData(
   ),
   textTheme: GoogleFonts.latoTextTheme(),
 );
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  FirebaseFirestore.instance.settings =
+      const Settings(persistenceEnabled: true);
+
   runApp(
     const App(),
   );

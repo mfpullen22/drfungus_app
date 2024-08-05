@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "237464232688",
+    "project_id": "dr-fungus-app",
+    "storage_bucket": "dr-fungus-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237464232688:android:39c7d5b1f887bbafe71835",
+        "android_client_info": {
+          "package_name": "com.example.drfungus_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP0fQROsgSJeXU658MKSMymWAoXgjBm2w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
