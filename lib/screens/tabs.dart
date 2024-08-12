@@ -4,6 +4,7 @@ import "package:drfungus_app/screens/datalist.dart";
 import "package:drfungus_app/screens/home_page.dart";
 import "package:flutter/material.dart";
 import "package:drfungus_app/data/data.dart";
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 
 class TabsScreen extends StatefulWidget {
   const TabsScreen({super.key});
@@ -31,12 +32,12 @@ class _TabsScreenState extends State<TabsScreen> {
         data: bugs,
       );
       activePageTitle = "Fungi";
-    } else if (_selectedPageIndex == 2) {
+    } else if (_selectedPageIndex == 2 || _selectedPageIndex == 3) {
       activePage = const DataListScreen(
         data: drugs,
       );
       activePageTitle = "Medications";
-    } else if (_selectedPageIndex == 3) {
+    } else if (_selectedPageIndex == 4) {
       activePage = const DataListScreen(
         data: bugs,
       );
@@ -50,17 +51,22 @@ class _TabsScreenState extends State<TabsScreen> {
               title: Text(activePageTitle),
             ),
       body: activePage,
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
+      bottomNavigationBar: ConvexAppBar(
+        backgroundColor: Colors.black,
+        activeColor: Colors.blue,
+        curveSize: 100,
+        top: -15,
+        //type: BottomNavigationBarType.fixed,
         onTap: _selectPage,
-        currentIndex: _selectedPageIndex,
+        style: TabStyle.fixed,
+        initialActiveIndex: 2,
+        //currentIndex: _selectedPageIndex,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.biotech), label: "Fungi"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.medication), label: "Medications"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.medication), label: "Mycoses"),
+          TabItem(icon: Icon(Icons.home), title: "Home"),
+          TabItem(icon: Icon(Icons.biotech), title: "Fungi"),
+          TabItem(icon: Icon(Icons.search), title: "Search"),
+          TabItem(icon: Icon(Icons.medication), title: "Medications"),
+          TabItem(icon: Icon(Icons.medication), title: "Mycoses"),
         ],
       ),
     );
