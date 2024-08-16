@@ -2,6 +2,7 @@
 import "package:drfungus_app/screens/datalist.dart";
 //import "package:drfungus_app/screens/drugs.dart";
 import "package:drfungus_app/screens/home_page.dart";
+import "package:drfungus_app/screens/test_data_screen.dart";
 import "package:flutter/material.dart";
 import "package:drfungus_app/data/data.dart";
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
@@ -32,10 +33,13 @@ class _TabsScreenState extends State<TabsScreen> {
         data: bugs,
       );
       activePageTitle = "Fungi";
-    } else if (_selectedPageIndex == 2 || _selectedPageIndex == 3) {
+    } else if (_selectedPageIndex == 3) {
       activePage = const DataListScreen(
         data: drugs,
       );
+      activePageTitle = "Medications";
+    } else if (_selectedPageIndex == 2) {
+      activePage = const TestDataScreen();
       activePageTitle = "Medications";
     } else if (_selectedPageIndex == 4) {
       activePage = const DataListScreen(
@@ -52,6 +56,7 @@ class _TabsScreenState extends State<TabsScreen> {
             ),
       body: activePage,
       bottomNavigationBar: ConvexAppBar(
+        height: 50,
         backgroundColor: Colors.black,
         activeColor: Colors.blue,
         curveSize: 100,

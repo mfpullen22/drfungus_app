@@ -2,6 +2,7 @@ import "package:drfungus_app/models/bug.dart";
 import "package:drfungus_app/models/drug.dart";
 import "package:drfungus_app/models/trial.dart";
 import "package:flutter/material.dart";
+import 'package:simple_rich_text/simple_rich_text.dart';
 
 class ItemDetailsScreen extends StatelessWidget {
   const ItemDetailsScreen({required this.name, required this.data, super.key});
@@ -239,9 +240,12 @@ class ItemDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-          Text(
-            data.description,
-            style: Theme.of(context).textTheme.bodyMedium,
+          Directionality(
+            textDirection: TextDirection.ltr,
+            child: SimpleRichText(
+              data.description,
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
           ),
           const SizedBox(height: 8),
           Container(
@@ -256,9 +260,12 @@ class ItemDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-          Text(
-            data.species,
-            style: Theme.of(context).textTheme.bodyMedium,
+          Directionality(
+            textDirection: TextDirection.ltr,
+            child: SimpleRichText(
+              data.species,
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
           ),
           const SizedBox(height: 8),
           Container(
@@ -273,9 +280,12 @@ class ItemDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-          Text(
-            data.clinical,
-            style: Theme.of(context).textTheme.bodyMedium,
+          Directionality(
+            textDirection: TextDirection.ltr,
+            child: SimpleRichText(
+              data.clinical,
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
           ),
           const SizedBox(height: 8),
           Container(
@@ -290,9 +300,12 @@ class ItemDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-          Text(
-            data.features,
-            style: Theme.of(context).textTheme.bodyMedium,
+          Directionality(
+            textDirection: TextDirection.ltr,
+            child: SimpleRichText(
+              data.features,
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
           ),
           const SizedBox(height: 8),
           Container(
@@ -307,9 +320,12 @@ class ItemDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-          Text(
-            data.precautions,
-            style: Theme.of(context).textTheme.bodyMedium,
+          Directionality(
+            textDirection: TextDirection.ltr,
+            child: SimpleRichText(
+              data.precautions,
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
           ),
           const SizedBox(height: 8),
           Container(
@@ -324,9 +340,12 @@ class ItemDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-          Text(
-            data.susceptibility,
-            style: Theme.of(context).textTheme.bodyMedium,
+          Directionality(
+            textDirection: TextDirection.ltr,
+            child: SimpleRichText(
+              data.susceptibility,
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
           ),
         ],
       );
