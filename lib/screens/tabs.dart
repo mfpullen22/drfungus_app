@@ -54,7 +54,7 @@ class _TabsScreenState extends State<TabsScreen> {
           : AppBar(
               title: Text(activePageTitle),
             ),
-      body: activePage,
+      body: SafeArea(child: activePage),
       bottomNavigationBar: ConvexAppBar(
         height: 50,
         backgroundColor: Colors.black,

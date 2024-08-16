@@ -1,3 +1,5 @@
+import 'package:drfungus_app/models/bug.dart';
+import 'package:drfungus_app/providers/firebase_provider.dart';
 import 'package:drfungus_app/screens/item_details.dart';
 import "package:flutter/material.dart";
 
@@ -7,8 +9,22 @@ class DataListScreen extends StatelessWidget {
   final String? title;
   final List<dynamic> data;
 
+  void testGetBugs() async {
+    final testData = await getBugs();
+    print(testData);
+
+    // To print the first item:
+    if (testData.isNotEmpty) {
+      print(testData[0].name);
+    } else {
+      print("No bugs found.");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    testGetBugs();
+    print(getBugs());
     Widget content = ListView.builder(
       itemCount: data.length,
       itemBuilder: (context, index) {
