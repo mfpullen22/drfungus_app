@@ -195,53 +195,13 @@ class HomePage extends StatelessWidget {
                                 child: AspectRatio(
                                   aspectRatio: 1.1,
                                   child: ElevatedButton(
-                                    onPressed: () {},
-                                    style: ElevatedButton.styleFrom(
-                                      elevation: 4,
-                                      backgroundColor: const Color.fromARGB(
-                                          255, 230, 237, 240),
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(
-                                            12), // Makes the buttons square
-                                      ),
-                                    ),
-                                    child: const Center(
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Icon(Icons.question_answer,
-                                              color:
-                                                  Color.fromRGBO(21, 40, 77, 1),
-                                              size: 48),
-                                          Text("Ask Dr. Fungus",
-                                              style: TextStyle(
-                                                  fontSize: 18,
-                                                  color: Color.fromRGBO(
-                                                      21, 40, 77, 1))),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Expanded(
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: AspectRatio(
-                                  aspectRatio: 1.1,
-                                  child: ElevatedButton(
                                     onPressed: () {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
                                           builder: (context) =>
                                               const DataListScreen(
-                                            title: "Clinical Trials",
+                                            title: "Trials",
                                           ),
                                         ),
                                       );
@@ -265,6 +225,46 @@ class HomePage extends StatelessWidget {
                                                   Color.fromRGBO(21, 40, 77, 1),
                                               size: 48),
                                           Text("Research",
+                                              style: TextStyle(
+                                                  fontSize: 18,
+                                                  color: Color.fromRGBO(
+                                                      21, 40, 77, 1))),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: AspectRatio(
+                                  aspectRatio: 1.1,
+                                  child: ElevatedButton(
+                                    onPressed: () {},
+                                    style: ElevatedButton.styleFrom(
+                                      elevation: 4,
+                                      backgroundColor: const Color.fromARGB(
+                                          255, 230, 237, 240),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(
+                                            12), // Makes the buttons square
+                                      ),
+                                    ),
+                                    child: const Center(
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Icon(Icons.question_answer,
+                                              color:
+                                                  Color.fromRGBO(21, 40, 77, 1),
+                                              size: 48),
+                                          Text("Ask Dr. Fungus",
                                               style: TextStyle(
                                                   fontSize: 18,
                                                   color: Color.fromRGBO(
@@ -327,86 +327,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-/* 
-Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color.fromRGBO(17, 75, 95, 100),
-                Color.fromRGBO(2, 128, 144, 100),
-              ],
-              begin: Alignment.bottomRight,
-              end: Alignment.topLeft,
-            ),
-          ),
-          child: Center(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              //mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset("assets/images/logo.jpg",
-                    fit: BoxFit.cover,
-                    width: MediaQuery.of(context).size.width * 0.9),
-                const SizedBox(height: 20),
-                MenuButton(
-                  title: "Fungi",
-                  onSelectMenu: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const DataListScreen(
-                          title: "Fungi",
-                          data: bugs,
-                        ),
-                      ),
-                    );
-                  },
-                ),
-                const SizedBox(height: 20),
-                MenuButton(
-                  title: "Syndromes",
-                  onSelectMenu: () {},
-                ),
-                const SizedBox(height: 20),
-                MenuButton(
-                  title: "Drugs",
-                  onSelectMenu: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const DataListScreen(
-                          title: "Medications",
-                          data: drugs,
-                        ),
-                      ),
-                    );
-                  },
-                ),
-                const SizedBox(height: 20),
-                MenuButton(
-                  title: "Guidelines",
-                  onSelectMenu: () {},
-                ),
-                const SizedBox(height: 20),
-                MenuButton(
-                  title: "Clinical Trials",
-                  onSelectMenu: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const DataListScreen(
-                          title: "Clinical Trials",
-                          data: trials,
-                        ),
-                      ),
-                    );
-                  },
-                ),
-                const SizedBox(height: 20),
-              ],
-            ),
-          ),
-        ), */
-
-
-

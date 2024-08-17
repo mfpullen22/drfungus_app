@@ -2,6 +2,7 @@ import "package:cloud_firestore/cloud_firestore.dart";
 import "package:drfungus_app/models/bug.dart";
 import "package:drfungus_app/models/drug.dart";
 import "package:drfungus_app/models/mycoses.dart";
+import "package:drfungus_app/models/trial.dart";
 
 Future<List<Bug>> getBugs() async {
   final data = await FirebaseFirestore.instance.collection("bugs").get();
@@ -60,4 +61,23 @@ Future<List<Mycoses>> getMycoses() async {
   }
 
   return mycosesList.toList();
+}
+
+Future<List<Trial>> getTrials() async {
+  final data = await FirebaseFirestore.instance.collection("trials").get();
+  final List<Trial> trialsList = [];
+
+  for (var doc in data.docs) {
+    final newTrial = Trial(
+      name: doc["name"],
+      organization: doc["organization"],
+      principal: doc["principal"],
+      description: doc["description"],
+      url: doc["url"],
+      email: doc["email"],
+    );
+    trialsList.add(newTrial);
+  }
+
+  return trialsList.toList();
 }

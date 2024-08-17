@@ -9,6 +9,7 @@ class DrugDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
           width: double.infinity,
@@ -22,13 +23,13 @@ class DrugDetailsScreen extends StatelessWidget {
                 .copyWith(color: Colors.white),
           ),
         ),
-        SizedBox(
-          width: double.infinity,
+        Directionality(
+          textDirection: TextDirection.ltr,
           child: SimpleRichText(data.name,
               textAlign: TextAlign.left,
               style: Theme.of(context).textTheme.bodyMedium),
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 14),
         Container(
           width: double.infinity,
           padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -45,7 +46,7 @@ class DrugDetailsScreen extends StatelessWidget {
           data.mechanism,
           style: Theme.of(context).textTheme.bodyMedium,
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 14),
         Container(
           width: double.infinity,
           padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -62,7 +63,7 @@ class DrugDetailsScreen extends StatelessWidget {
           data.susceptibility,
           style: Theme.of(context).textTheme.bodyMedium,
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 14),
         Container(
           width: double.infinity,
           padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -79,7 +80,7 @@ class DrugDetailsScreen extends StatelessWidget {
           data.dosage,
           style: Theme.of(context).textTheme.bodyMedium,
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 14),
         Container(
           width: double.infinity,
           padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -96,7 +97,7 @@ class DrugDetailsScreen extends StatelessWidget {
           data.adverse,
           style: Theme.of(context).textTheme.bodyMedium,
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 14),
         Container(
           width: double.infinity,
           padding: const EdgeInsets.symmetric(horizontal: 10),

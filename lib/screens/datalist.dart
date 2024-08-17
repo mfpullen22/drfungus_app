@@ -11,13 +11,17 @@ class DataListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future<List<dynamic>>? data;
+
     if (title == "Fungi") {
       data = getBugs();
     } else if (title == "Medications") {
       data = getDrugs();
     } else if (title == "Mycoses") {
       data = getMycoses();
+    } else if (title == "Trials") {
+      data = getTrials();
     }
+
     Widget content = FutureBuilder(
       future: data,
       builder: (ctx, snapshot) {
@@ -46,19 +50,24 @@ class DataListScreen extends StatelessWidget {
           return ListView.builder(
             itemCount: snapshot.data!.length,
             itemBuilder: (ctx, index) {
-              return ListTile(
-                title: Text(snapshot.data![index].name),
-                tileColor: Theme.of(context).colorScheme.secondaryContainer,
-                onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (ctx) => ItemDetailsScreen(
-                        name: snapshot.data![index].name,
-                        data: snapshot.data![index],
-                      ),
-                    ),
-                  );
-                },
+              return Column(
+                children: [
+                  ListTile(
+                    title: Text(snapshot.data![index].name),
+                    tileColor: Theme.of(context).colorScheme.secondaryContainer,
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (ctx) => ItemDetailsScreen(
+                            name: snapshot.data![index].name,
+                            data: snapshot.data![index],
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                  const SizedBox(height: 2),
+                ],
               );
             },
           );

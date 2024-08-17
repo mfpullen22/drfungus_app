@@ -1,10 +1,19 @@
 import "package:flutter/material.dart";
 import "package:simple_rich_text/simple_rich_text.dart";
+import 'package:url_launcher/url_launcher.dart';
 
 class TrialDetailsScreen extends StatelessWidget {
   const TrialDetailsScreen({required this.data, super.key});
 
   final dynamic data;
+
+  void _launchURL(String url) async {
+    if (await canLaunchUrl(Uri.parse(url))) {
+      await launchUrl(Uri.parse(url));
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -76,13 +85,42 @@ class TrialDetailsScreen extends StatelessWidget {
                 .copyWith(color: Colors.white),
           ),
         ),
-        SizedBox(
-          width: double.infinity,
-          child: SimpleRichText(
-            data.url,
-            style: Theme.of(context).textTheme.bodyMedium,
+        if (data.url != null)
+          SizedBox(
+            width: double.infinity,
+            child: GestureDetector(
+              onTap: () {
+                _launchURL(data.url);
+              },
+              child: Text(
+                "Website: " + data.url,
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: Colors.blue[
+                          900], // Optional: make the text look like a link
+                      decoration: TextDecoration
+                          .underline, // Optional: underline the text
+                    ),
+              ),
+            ),
           ),
-        ),
+        if (data.email != null)
+          SizedBox(
+            width: double.infinity,
+            child: GestureDetector(
+              onTap: () {
+                _launchURL(data.url);
+              },
+              child: Text(
+                "Email: " + data.email,
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: Colors.blue[
+                          900], // Optional: make the text look like a link
+                      decoration: TextDecoration
+                          .underline, // Optional: underline the text
+                    ),
+              ),
+            ),
+          ),
       ],
     );
   }

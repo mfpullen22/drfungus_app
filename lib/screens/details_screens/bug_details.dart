@@ -22,7 +22,6 @@ class BugDetailsScreen extends StatelessWidget {
                 .copyWith(color: Colors.white),
           ),
         ),
-        const SizedBox(height: 8),
         Row(
           children: [
             SimpleRichText(
@@ -114,7 +113,7 @@ class BugDetailsScreen extends StatelessWidget {
             const SizedBox(height: 8),
           ],
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 14),
         Container(
           width: double.infinity,
           padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -134,7 +133,7 @@ class BugDetailsScreen extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyMedium,
           ),
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 14),
         Container(
           width: double.infinity,
           padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -154,7 +153,7 @@ class BugDetailsScreen extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyMedium,
           ),
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 14),
         Container(
           width: double.infinity,
           padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -174,7 +173,7 @@ class BugDetailsScreen extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyMedium,
           ),
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 14),
         Container(
           width: double.infinity,
           padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -194,7 +193,7 @@ class BugDetailsScreen extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyMedium,
           ),
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 14),
         Container(
           width: double.infinity,
           padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -214,7 +213,7 @@ class BugDetailsScreen extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyMedium,
           ),
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 14),
         Container(
           width: double.infinity,
           padding: const EdgeInsets.symmetric(horizontal: 10),
