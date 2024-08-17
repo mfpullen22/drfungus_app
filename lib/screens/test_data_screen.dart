@@ -1,5 +1,6 @@
+import 'package:drfungus_app/providers/firebase_provider.dart';
+import 'package:drfungus_app/screens/item_details_hub.dart';
 import "package:flutter/material.dart";
-import 'package:simple_rich_text/simple_rich_text.dart';
 
 class TestDataScreen extends StatelessWidget {
   const TestDataScreen({super.key});
@@ -7,22 +8,36 @@ class TestDataScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Test Data"),
-      ),
-      body: Column(
-        children: [
-          Directionality(
-            textDirection: TextDirection.ltr,
-            child: SimpleRichText(
-              "This is a *test* of \nthe /SimpleRichText/ widget.",
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyMedium!
-                  .copyWith(color: Theme.of(context).colorScheme.onSurface),
-            ),
-          ),
-        ],
+      body: FutureBuilder(
+        future: getBugs(),
+        builder: (ctx, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          } else if (snapshot.error != null) {
+            // Handle error
+            return const Center(child: Text('An error occurred!'));
+          } else {
+            return ListView.builder(
+              itemCount: snapshot.data!.length,
+              itemBuilder: (ctx, index) {
+                return ListTile(
+                  title: Text(snapshot.data![index].name),
+                  tileColor: Theme.of(context).colorScheme.secondaryContainer,
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (ctx) => ItemDetailsScreen(
+                          name: snapshot.data![index].name,
+                          data: snapshot.data![index],
+                        ),
+                      ),
+                    );
+                  },
+                );
+              },
+            );
+          }
+        },
       ),
     );
   }

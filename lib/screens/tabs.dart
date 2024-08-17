@@ -1,10 +1,7 @@
-//import "package:drfungus_app/screens/bugs.dart";
+import "package:flutter/material.dart";
 import "package:drfungus_app/screens/datalist.dart";
-//import "package:drfungus_app/screens/drugs.dart";
 import "package:drfungus_app/screens/home_page.dart";
 import "package:drfungus_app/screens/test_data_screen.dart";
-import "package:flutter/material.dart";
-import "package:drfungus_app/data/data.dart";
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 
 class TabsScreen extends StatefulWidget {
@@ -30,20 +27,20 @@ class _TabsScreenState extends State<TabsScreen> {
 
     if (_selectedPageIndex == 1) {
       activePage = const DataListScreen(
-        data: bugs,
+        title: "Fungi",
       );
       activePageTitle = "Fungi";
     } else if (_selectedPageIndex == 3) {
       activePage = const DataListScreen(
-        data: drugs,
+        title: "Medications",
       );
       activePageTitle = "Medications";
     } else if (_selectedPageIndex == 2) {
       activePage = const TestDataScreen();
-      activePageTitle = "Medications";
+      activePageTitle = "Test Data Screen";
     } else if (_selectedPageIndex == 4) {
       activePage = const DataListScreen(
-        data: bugs,
+        title: "Mycoses",
       );
       activePageTitle = "Mycoses";
     }
@@ -56,11 +53,11 @@ class _TabsScreenState extends State<TabsScreen> {
             ),
       body: SafeArea(child: activePage),
       bottomNavigationBar: ConvexAppBar(
-        height: 50,
+        height: 66,
         backgroundColor: Colors.black,
         activeColor: Colors.blue,
-        curveSize: 100,
-        top: -15,
+        curveSize: 60,
+        top: -10,
         //type: BottomNavigationBarType.fixed,
         onTap: _selectPage,
         style: TabStyle.fixed,

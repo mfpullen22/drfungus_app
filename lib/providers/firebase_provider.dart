@@ -1,6 +1,7 @@
 import "package:cloud_firestore/cloud_firestore.dart";
 import "package:drfungus_app/models/bug.dart";
-import "package:flutter/material.dart";
+import "package:drfungus_app/models/drug.dart";
+import "package:drfungus_app/models/mycoses.dart";
 
 Future<List<Bug>> getBugs() async {
   final data = await FirebaseFirestore.instance.collection("bugs").get();
@@ -20,4 +21,43 @@ Future<List<Bug>> getBugs() async {
   }
 
   return bugList.toList();
+}
+
+Future<List<Drug>> getDrugs() async {
+  final data = await FirebaseFirestore.instance.collection("drugs").get();
+  final List<Drug> drugList = [];
+
+  for (var doc in data.docs) {
+    final newDrug = Drug(
+      name: doc["name"],
+      mechanism: doc["mechanism"],
+      susceptibility: doc["susceptibility"],
+      dosage: doc["dosage"],
+      adverse: doc["adverse"],
+      status: doc["status"],
+    );
+    drugList.add(newDrug);
+  }
+
+  return drugList.toList();
+}
+
+Future<List<Mycoses>> getMycoses() async {
+  final data = await FirebaseFirestore.instance.collection("mycoses").get();
+  final List<Mycoses> mycosesList = [];
+
+  for (var doc in data.docs) {
+    final newMycoses = Mycoses(
+      name: doc["name"],
+      mycology: doc["mycology"],
+      epidemiology: doc["epidemiology"],
+      pathogenesis: doc["pathogenesis"],
+      clinical: doc["clinical"],
+      diagnosis: doc["diagnosis"],
+      treatment: doc["treatment"],
+    );
+    mycosesList.add(newMycoses);
+  }
+
+  return mycosesList.toList();
 }
