@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:simple_rich_text/simple_rich_text.dart";
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter/gestures.dart';
 
 class TrialDetailsScreen extends StatelessWidget {
   const TrialDetailsScreen({required this.data, super.key});
@@ -12,6 +13,19 @@ class TrialDetailsScreen extends StatelessWidget {
       await launchUrl(Uri.parse(url));
     } else {
       throw 'Could not launch $url';
+    }
+  }
+
+  void _launchEmail(email) async {
+    final Uri emailUri = Uri(
+      scheme: 'mailto',
+      path: email,
+    );
+
+    if (await canLaunchUrl(emailUri)) {
+      await launchUrl(emailUri);
+    } else {
+      throw 'Could not launch $emailUri';
     }
   }
 
@@ -85,39 +99,53 @@ class TrialDetailsScreen extends StatelessWidget {
                 .copyWith(color: Colors.white),
           ),
         ),
-        if (data.url != null)
+        if (data.url.isNotEmpty)
           SizedBox(
             width: double.infinity,
-            child: GestureDetector(
-              onTap: () {
-                _launchURL(data.url);
-              },
-              child: Text(
-                "Website: " + data.url,
-                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      color: Colors.blue[
-                          900], // Optional: make the text look like a link
-                      decoration: TextDecoration
-                          .underline, // Optional: underline the text
-                    ),
+            child: RichText(
+              text: TextSpan(
+                text: "Study Website: ",
+                style: Theme.of(context).textTheme.bodyMedium,
+                children: [
+                  TextSpan(
+                    text: data.url,
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          color: Colors.blue[
+                              900], // Optional: make the text look like a link
+                          decoration: TextDecoration
+                              .underline, // Optional: underline the text
+                        ),
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        _launchURL(data.url);
+                      },
+                  ),
+                ],
               ),
             ),
           ),
-        if (data.email != null)
+        if (data.email.isNotEmpty)
           SizedBox(
             width: double.infinity,
-            child: GestureDetector(
-              onTap: () {
-                _launchURL(data.url);
-              },
-              child: Text(
-                "Email: " + data.email,
-                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      color: Colors.blue[
-                          900], // Optional: make the text look like a link
-                      decoration: TextDecoration
-                          .underline, // Optional: underline the text
-                    ),
+            child: RichText(
+              text: TextSpan(
+                text: "Contact E-mail: ",
+                style: Theme.of(context).textTheme.bodyMedium,
+                children: [
+                  TextSpan(
+                    text: data.email,
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          color: Colors.blue[
+                              900], // Optional: make the text look like a link
+                          decoration: TextDecoration
+                              .underline, // Optional: underline the text
+                        ),
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        _launchEmail(data.email);
+                      },
+                  ),
+                ],
               ),
             ),
           ),
