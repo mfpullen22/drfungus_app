@@ -26,31 +26,34 @@ class _TabsScreenState extends State<TabsScreen> {
     var activePageTitle = "Doctor Fungus";
 
     if (_selectedPageIndex == 1) {
+      setState(() {
+        activePageTitle = "Fungi";
+      });
       activePage = const DataListScreen(
         title: "Fungi",
       );
-      activePageTitle = "Fungi";
+    } else if (_selectedPageIndex == 2) {
+      setState(() {
+        activePageTitle = "Test Data Screen";
+      });
+      activePage = const TestDataScreen();
     } else if (_selectedPageIndex == 3) {
+      setState(() {
+        activePageTitle = "Medications";
+      });
       activePage = const DataListScreen(
         title: "Medications",
       );
-      activePageTitle = "Medications";
-    } else if (_selectedPageIndex == 2) {
-      activePage = const TestDataScreen();
-      activePageTitle = "Test Data Screen";
     } else if (_selectedPageIndex == 4) {
+      setState(() {
+        activePageTitle = "Mycoses";
+      });
       activePage = const DataListScreen(
         title: "Mycoses",
       );
-      activePageTitle = "Mycoses";
     }
 
     return Scaffold(
-      appBar: activePageTitle == "Doctor Fungus"
-          ? null
-          : AppBar(
-              title: Text(activePageTitle),
-            ),
       body: SafeArea(child: activePage),
       bottomNavigationBar: ConvexAppBar(
         height: 66,

@@ -8,6 +8,9 @@ class TestDataScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Test Data Screen"),
+      ),
       body: FutureBuilder(
         future: getBugs(),
         builder: (ctx, snapshot) {
