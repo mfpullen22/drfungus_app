@@ -1,7 +1,9 @@
+// ignore_for_file: unused_local_variable
+
+import "package:drfungus_app/screens/search.dart";
 import "package:flutter/material.dart";
 import "package:drfungus_app/screens/datalist.dart";
 import "package:drfungus_app/screens/home_page.dart";
-import "package:drfungus_app/screens/test_data_screen.dart";
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 
 class TabsScreen extends StatefulWidget {
@@ -34,9 +36,9 @@ class _TabsScreenState extends State<TabsScreen> {
       );
     } else if (_selectedPageIndex == 2) {
       setState(() {
-        activePageTitle = "Test Data Screen";
+        activePageTitle = "Search";
       });
-      activePage = const TestDataScreen();
+      activePage = const SearchScreen();
     } else if (_selectedPageIndex == 3) {
       setState(() {
         activePageTitle = "Medications";

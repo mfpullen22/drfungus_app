@@ -1,6 +1,7 @@
 class Mycoses {
   const Mycoses({
     required this.name,
+    required this.name_lower,
     required this.mycology,
     required this.epidemiology,
     required this.clinical,
@@ -10,10 +11,24 @@ class Mycoses {
   });
 
   final String name;
+  final String name_lower;
   final String mycology;
   final String epidemiology;
   final String clinical;
   final String pathogenesis;
   final String diagnosis;
   final String treatment;
+
+  factory Mycoses.fromMap(Map<String, dynamic> map) {
+    return Mycoses(
+      name: map['name'] ?? '',
+      name_lower: map["name_lower"] ?? '',
+      mycology: map['mycology'] ?? {},
+      epidemiology: map['epidemiology'] ?? '',
+      clinical: map['clinical'] ?? '',
+      pathogenesis: map['pathogenesis'] ?? '',
+      diagnosis: map['diagnosis'] ?? '',
+      treatment: map['treatment'] ?? '',
+    );
+  }
 }

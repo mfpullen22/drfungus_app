@@ -11,6 +11,7 @@ Future<List<Bug>> getBugs() async {
   for (var doc in data.docs) {
     final newBug = Bug(
         name: doc["name"],
+        name_lower: doc["name_lower"],
         taxonomy: doc["taxonomy"],
         description: doc["description"],
         species: doc["species"],
@@ -31,6 +32,7 @@ Future<List<Drug>> getDrugs() async {
   for (var doc in data.docs) {
     final newDrug = Drug(
       name: doc["name"],
+      name_lower: doc["name_lower"],
       mechanism: doc["mechanism"],
       susceptibility: doc["susceptibility"],
       dosage: doc["dosage"],
@@ -50,6 +52,7 @@ Future<List<Mycoses>> getMycoses() async {
   for (var doc in data.docs) {
     final newMycoses = Mycoses(
       name: doc["name"],
+      name_lower: doc["name_lower"],
       mycology: doc["mycology"],
       epidemiology: doc["epidemiology"],
       pathogenesis: doc["pathogenesis"],
