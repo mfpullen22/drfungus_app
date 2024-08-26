@@ -4,6 +4,7 @@ class Mycoses {
   const Mycoses({
     required this.name,
     required this.name_lower,
+    required this.keywords,
     required this.mycology,
     required this.epidemiology,
     required this.clinical,
@@ -14,6 +15,7 @@ class Mycoses {
 
   final String name;
   final String name_lower;
+  final List<dynamic> keywords;
   final String mycology;
   final String epidemiology;
   final String clinical;
@@ -25,6 +27,7 @@ class Mycoses {
     return Mycoses(
       name: map['name'] ?? '',
       name_lower: map["name_lower"] ?? '',
+      keywords: map['keywords'] ?? [""],
       mycology: map['mycology'] ?? {},
       epidemiology: map['epidemiology'] ?? '',
       clinical: map['clinical'] ?? '',

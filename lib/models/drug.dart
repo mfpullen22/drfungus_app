@@ -4,6 +4,7 @@ class Drug {
   const Drug(
       {required this.name,
       required this.name_lower,
+      required this.keywords,
       required this.mechanism,
       required this.susceptibility,
       required this.dosage,
@@ -12,6 +13,7 @@ class Drug {
 
   final String name;
   final String name_lower;
+  final List<dynamic> keywords;
   final String mechanism;
   final String susceptibility;
   final String dosage;
@@ -22,6 +24,7 @@ class Drug {
     return Drug(
       name: map['name'] ?? '',
       name_lower: map["name_lower"] ?? '',
+      keywords: map['keywords'] ?? [""],
       mechanism: map['mechanism'] ?? {},
       susceptibility: map['susceptibility'] ?? '',
       dosage: map['dosage'] ?? '',

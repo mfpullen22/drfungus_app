@@ -4,6 +4,7 @@ class Bug {
   const Bug(
       {required this.name,
       required this.name_lower,
+      required this.keywords,
       required this.taxonomy,
       required this.description,
       required this.species,
@@ -14,6 +15,7 @@ class Bug {
 
   final String name;
   final String name_lower;
+  final List<dynamic> keywords;
   final Map taxonomy;
   final String description;
   final String species;
@@ -26,6 +28,7 @@ class Bug {
     return Bug(
       name: map['name'] ?? '',
       name_lower: map["name_lower"] ?? '',
+      keywords: map['keywords'] ?? [""],
       taxonomy: map['taxonomy'] ?? {},
       description: map['description'] ?? '',
       species: map['species'] ?? '',

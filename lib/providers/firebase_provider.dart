@@ -12,6 +12,7 @@ Future<List<Bug>> getBugs() async {
     final newBug = Bug(
         name: doc["name"],
         name_lower: doc["name_lower"],
+        keywords: doc["keywords"],
         taxonomy: doc["taxonomy"],
         description: doc["description"],
         species: doc["species"],
@@ -33,6 +34,7 @@ Future<List<Drug>> getDrugs() async {
     final newDrug = Drug(
       name: doc["name"],
       name_lower: doc["name_lower"],
+      keywords: doc["keywords"],
       mechanism: doc["mechanism"],
       susceptibility: doc["susceptibility"],
       dosage: doc["dosage"],
@@ -53,6 +55,7 @@ Future<List<Mycoses>> getMycoses() async {
     final newMycoses = Mycoses(
       name: doc["name"],
       name_lower: doc["name_lower"],
+      keywords: doc["keywords"],
       mycology: doc["mycology"],
       epidemiology: doc["epidemiology"],
       pathogenesis: doc["pathogenesis"],

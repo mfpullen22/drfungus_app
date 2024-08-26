@@ -6,6 +6,7 @@ const bugs = [
   Bug(
     name: "Cryptococcus species",
     name_lower: "cryptococcus species",
+    keywords: ["cryptococcus"],
     taxonomy: {
       "kingdom": "Fungi",
       "phylum": "Basidiomycota",
@@ -32,6 +33,7 @@ const drugs = [
   Drug(
     name: "Voriconazole (Vfend)",
     name_lower: "voriconazole (vfend)",
+    keywords: ["voriconazole", "vfend"],
     mechanism:
         "As with all azole antifungal agents, voriconazole works principally by inhibition of cytochrome P450 14a-demethylase. This enzyme is in the sterol biosynthesis pathway that leads from lanosterol to ergosterol [1674, 1735]. Compared to fluconazole, voriconazole inhibits P45014DM to a greater extend. This inhibition is dose-dependent.",
     susceptibility:

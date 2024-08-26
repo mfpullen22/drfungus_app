@@ -32,22 +32,25 @@ class SearchScreenState extends State<SearchScreen> {
     // Perform search in the "bugs" collection
     QuerySnapshot bugsSnapshot = await FirebaseFirestore.instance
         .collection('bugs')
-        .where('name_lower', isGreaterThanOrEqualTo: lowerCaseInput)
-        .where('name_lower', isLessThanOrEqualTo: lowerCaseInput + '\uf8ff')
+        //.where('name_lower', isGreaterThanOrEqualTo: lowerCaseInput)
+        //.where('name_lower', isLessThanOrEqualTo: lowerCaseInput + '\uf8ff')
+        //.where('keywords', arrayContains: lowerCaseInput)
         .get();
 
     // Perform search in the "drugs" collection
     QuerySnapshot drugsSnapshot = await FirebaseFirestore.instance
         .collection('drugs')
-        .where('name_lower', isGreaterThanOrEqualTo: lowerCaseInput)
-        .where('name_lower', isLessThanOrEqualTo: lowerCaseInput + '\uf8ff')
+        //.where('name_lower', isGreaterThanOrEqualTo: lowerCaseInput)
+        //.where('name_lower', isLessThanOrEqualTo: lowerCaseInput + '\uf8ff')
+        //.where('keywords', arrayContains: lowerCaseInput)
         .get();
 
     // Perform search in the "mycoses" collection
     QuerySnapshot mycosesSnapshot = await FirebaseFirestore.instance
         .collection('mycoses')
-        .where('name_lower', isGreaterThanOrEqualTo: lowerCaseInput)
-        .where('name_lower', isLessThanOrEqualTo: lowerCaseInput + '\uf8ff')
+        //.where('name_lower', isGreaterThanOrEqualTo: lowerCaseInput)
+        //.where('name_lower', isLessThanOrEqualTo: lowerCaseInput + '\uf8ff')
+        //.where('keywords', arrayContains: lowerCaseInput)
         .get();
 
     // Combine the results from all collections
@@ -56,9 +59,15 @@ class SearchScreenState extends State<SearchScreen> {
     allResults.addAll(drugsSnapshot.docs);
     allResults.addAll(mycosesSnapshot.docs);
 
+    List<DocumentSnapshot> filteredResults = allResults.where((doc) {
+      final data = doc.data() as Map<String, dynamic>;
+      final keywords = List<String>.from(data['keywords']);
+      return keywords.any((keyword) => keyword.contains(lowerCaseInput));
+    }).toList();
+
     setState(() {
       query = input;
-      searchResults = allResults;
+      searchResults = filteredResults;
     });
   }
 
