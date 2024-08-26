@@ -297,11 +297,11 @@ class HomePage extends StatelessWidget {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Icon(Icons.person_add,
+                                          Icon(Icons.groups,
                                               color:
                                                   Color.fromRGBO(21, 40, 77, 1),
                                               size: 48),
-                                          Text("Join MSG",
+                                          Text("About MSG",
                                               style: TextStyle(
                                                   fontSize: 18,
                                                   color: Color.fromRGBO(
