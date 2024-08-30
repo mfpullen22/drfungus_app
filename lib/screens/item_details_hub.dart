@@ -5,6 +5,7 @@ import "package:drfungus_app/models/trial.dart";
 import "package:drfungus_app/screens/details_screens/bug_details.dart";
 import "package:drfungus_app/screens/details_screens/drug_details.dart";
 import "package:drfungus_app/screens/details_screens/mycoses_details.dart";
+import "package:drfungus_app/screens/details_screens/test_details.dart";
 import "package:drfungus_app/screens/details_screens/trials_details.dart";
 import "package:flutter/material.dart";
 
@@ -23,7 +24,7 @@ class ItemDetailsScreen extends StatelessWidget {
     } else if (data is Bug) {
       content = BugDetailsScreen(data: data);
     } else if (data is Mycoses) {
-      content = MycosesDetailsScreen(data: data);
+      content = TestDetailsScreen(data: data);
     } else if (data is Trial) {
       content = TrialDetailsScreen(data: data);
     } else {

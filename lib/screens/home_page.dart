@@ -220,11 +220,13 @@ class HomePage extends StatelessWidget {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
+                                          SizedBox(height: 30),
                                           Icon(Icons.biotech,
                                               color:
                                                   Color.fromRGBO(21, 40, 77, 1),
                                               size: 48),
-                                          Text("Research",
+                                          Text("Research and Education",
+                                              textAlign: TextAlign.center,
                                               style: TextStyle(
                                                   fontSize: 18,
                                                   color: Color.fromRGBO(
