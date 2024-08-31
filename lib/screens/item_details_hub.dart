@@ -24,7 +24,7 @@ class ItemDetailsScreen extends StatelessWidget {
     } else if (data is Bug) {
       content = BugDetailsScreen(data: data);
     } else if (data is Mycoses) {
-      content = TestDetailsScreen(data: data);
+      content = MycosesDetailsScreen(data: data);
     } else if (data is Trial) {
       content = TrialDetailsScreen(data: data);
     } else {

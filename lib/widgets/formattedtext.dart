@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_interpolation_to_compose_strings
+
 import 'package:flutter/material.dart';
 import 'package:simple_rich_text/simple_rich_text.dart';
 
@@ -19,11 +21,13 @@ class FormattedText extends StatelessWidget {
     StringBuffer buffer = StringBuffer();
 
     for (var part in parts) {
-      if (part.contains('[INDENT]{')) {
+      part = part.trim();
+
+      if (part.contains('[INDENT]{') && !isInIndentBlock) {
         // Start of an indented block
         isInIndentBlock = true;
         buffer.write(part.replaceFirst('[INDENT]{', '').trim());
-      } else if (part.contains('}')) {
+      } else if (part.contains('}') && isInIndentBlock) {
         // End of an indented block
         isInIndentBlock = false;
         buffer.write('\n' + part.replaceFirst('}', '').trim());
@@ -32,8 +36,7 @@ class FormattedText extends StatelessWidget {
             padding: const EdgeInsets.only(left: 20.0),
             child: SimpleRichText(
               buffer.toString(),
-              style: const TextStyle(
-                  fontSize: 16, height: 1.5, color: Colors.black),
+              style: const TextStyle(fontSize: 16, color: Colors.black),
             ),
           ),
         );
@@ -46,8 +49,7 @@ class FormattedText extends StatelessWidget {
         spans.add(
           SimpleRichText(
             part.trim(),
-            style:
-                const TextStyle(fontSize: 16, height: 1.5, color: Colors.black),
+            style: const TextStyle(fontSize: 16, color: Colors.black),
           ),
         );
       }
