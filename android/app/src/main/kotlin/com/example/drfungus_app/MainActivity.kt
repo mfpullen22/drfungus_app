@@ -1,4 +1,4 @@
-package com.example.drfungus_app
+package com.mfpullenmd.drfungus
 
 import io.flutter.embedding.android.FlutterActivity
 

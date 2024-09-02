@@ -12,7 +12,11 @@ class TrialDetailsScreen extends StatelessWidget {
   void _launchURL(String url) async {
     final Uri uri = Uri.parse(url);
     if (await canLaunchUrl(uri)) {
-      await launchUrl(uri);
+      await launchUrl(
+        uri,
+        mode: LaunchMode
+            .externalApplication, // This forces the URL to open in a browser
+      );
     } else {
       throw 'Could not launch $url';
     }
@@ -25,7 +29,11 @@ class TrialDetailsScreen extends StatelessWidget {
     );
 
     if (await canLaunchUrl(emailUri)) {
-      await launchUrl(emailUri);
+      await launchUrl(
+        emailUri,
+        mode: LaunchMode
+            .externalApplication, // This forces the email to open in the email app
+      );
     } else {
       throw 'Could not launch $emailUri';
     }
@@ -151,6 +159,29 @@ class TrialDetailsScreen extends StatelessWidget {
   }
 }
 
+/*
+void _launchURL(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  void _launchEmail(String email) async {
+    final Uri emailUri = Uri(
+      scheme: 'mailto',
+      path: email,
+    );
+
+    if (await canLaunchUrl(emailUri)) {
+      await launchUrl(emailUri);
+    } else {
+      throw 'Could not launch $emailUri';
+    }
+  }
+  */
 /*
 Column(
       children: [
