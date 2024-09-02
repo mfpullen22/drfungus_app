@@ -1,3 +1,4 @@
+import 'package:drfungus_app/widgets/activetrials.dart';
 import 'package:drfungus_app/widgets/formattedtext.dart';
 import 'package:flutter/material.dart';
 import "package:simple_rich_text/simple_rich_text.dart";
@@ -11,6 +12,7 @@ class MycosesDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        if (data.trials[0] != "") ActiveTrialsListTile(data: data),
         if (data.mycology.isNotEmpty)
           Container(
             width: double.infinity,
@@ -105,7 +107,31 @@ class MycosesDetailsScreen extends StatelessWidget {
             ),
           ),
         if (data.treatment.isNotEmpty)
-          FormattedText(firestoreString: data.treatment)
+          FormattedText(firestoreString: data.treatment),
+        if (data.references.length > 1) const SizedBox(height: 14),
+        if (data.references.length > 1)
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            color: Theme.of(context).colorScheme.secondaryContainer,
+            child: SimpleRichText(
+              "References",
+              style: Theme.of(context)
+                  .textTheme
+                  .titleMedium!
+                  .copyWith(color: Colors.white),
+            ),
+          ),
+        for (var ref in data.references)
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 4.0),
+            child: Text(
+              ref,
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    fontSize: 12,
+                  ),
+            ),
+          ),
       ],
     );
   }
@@ -247,3 +273,4 @@ class MycosesDetailsScreen extends StatelessWidget {
     );
   }
 } */
+

@@ -4,9 +4,10 @@ import 'package:drfungus_app/screens/item_details_hub.dart';
 import "package:flutter/material.dart";
 
 class DataListScreen extends StatelessWidget {
-  const DataListScreen({this.title, super.key});
+  const DataListScreen({this.title, this.docIds, super.key});
 
   final String? title;
+  final List<String>? docIds;
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +21,8 @@ class DataListScreen extends StatelessWidget {
       data = getMycoses();
     } else if (title == "Trials") {
       data = getTrials();
+    } else if (title == "Active Trials") {
+      data = getActiveTrials(docIds!);
     }
 
     Widget content = FutureBuilder(

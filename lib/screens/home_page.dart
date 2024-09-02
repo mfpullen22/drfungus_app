@@ -106,7 +106,7 @@ class HomePage extends StatelessWidget {
                                         MaterialPageRoute(
                                           builder: (context) =>
                                               const DataListScreen(
-                                            title: "Medications",
+                                            title: "Mycoses",
                                           ),
                                         ),
                                       );
@@ -125,11 +125,11 @@ class HomePage extends StatelessWidget {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Icon(Icons.medication,
+                                          Icon(Icons.medical_information,
                                               color:
                                                   Color.fromRGBO(21, 40, 77, 1),
                                               size: 48),
-                                          Text("Medications",
+                                          Text("Mycoses",
                                               style: TextStyle(
                                                   fontSize: 18,
                                                   color: Color.fromRGBO(
@@ -156,7 +156,7 @@ class HomePage extends StatelessWidget {
                                         MaterialPageRoute(
                                           builder: (context) =>
                                               const DataListScreen(
-                                            title: "Mycoses",
+                                            title: "Medications",
                                           ),
                                         ),
                                       );
@@ -175,11 +175,11 @@ class HomePage extends StatelessWidget {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Icon(Icons.medical_information,
+                                          Icon(Icons.medication,
                                               color:
                                                   Color.fromRGBO(21, 40, 77, 1),
                                               size: 48),
-                                          Text("Mycoses",
+                                          Text("Medications",
                                               style: TextStyle(
                                                   fontSize: 18,
                                                   color: Color.fromRGBO(

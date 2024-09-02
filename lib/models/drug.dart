@@ -1,5 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 
+import 'package:drfungus_app/data/data.dart';
+
 class Drug {
   const Drug(
       {required this.name,
@@ -9,7 +11,9 @@ class Drug {
       required this.susceptibility,
       required this.dosage,
       required this.adverse,
-      required this.status});
+      required this.status,
+      required this.references,
+      required this.trials});
 
   final String name;
   final String name_lower;
@@ -19,6 +23,8 @@ class Drug {
   final String dosage;
   final String adverse;
   final String status;
+  final List<dynamic> references;
+  final List<dynamic> trials;
 
   factory Drug.fromMap(Map<String, dynamic> map) {
     return Drug(
@@ -30,6 +36,8 @@ class Drug {
       dosage: map['dosage'] ?? '',
       adverse: map['adverse'] ?? '',
       status: map['status'] ?? '',
+      references: map['references'] ?? [],
+      trials: map['trials'] ?? [],
     );
   }
 }

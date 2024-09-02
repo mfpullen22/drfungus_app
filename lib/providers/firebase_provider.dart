@@ -10,16 +10,19 @@ Future<List<Bug>> getBugs() async {
 
   for (var doc in data.docs) {
     final newBug = Bug(
-        name: doc["name"],
-        name_lower: doc["name_lower"],
-        keywords: doc["keywords"],
-        taxonomy: doc["taxonomy"],
-        description: doc["description"],
-        species: doc["species"],
-        clinical: doc["clinical"],
-        features: doc["features"],
-        precautions: doc["precautions"],
-        susceptibility: doc["susceptibility"]);
+      name: doc["name"],
+      name_lower: doc["name_lower"],
+      keywords: doc["keywords"],
+      taxonomy: doc["taxonomy"],
+      description: doc["description"],
+      species: doc["species"],
+      clinical: doc["clinical"],
+      features: doc["features"],
+      precautions: doc["precautions"],
+      susceptibility: doc["susceptibility"],
+      references: doc["references"],
+      trials: doc["trials"],
+    );
     bugList.add(newBug);
   }
 
@@ -40,6 +43,8 @@ Future<List<Drug>> getDrugs() async {
       dosage: doc["dosage"],
       adverse: doc["adverse"],
       status: doc["status"],
+      references: doc["references"],
+      trials: doc["trials"],
     );
     drugList.add(newDrug);
   }
@@ -62,6 +67,8 @@ Future<List<Mycoses>> getMycoses() async {
       clinical: doc["clinical"],
       diagnosis: doc["diagnosis"],
       treatment: doc["treatment"],
+      references: doc["references"],
+      trials: doc["trials"],
     );
     mycosesList.add(newMycoses);
   }
@@ -86,4 +93,25 @@ Future<List<Trial>> getTrials() async {
   }
 
   return trialsList.toList();
+}
+
+Future<List<Trial>> getActiveTrials(List<String> docIds) async {
+  final List<Trial> trialsList = [];
+
+  for (var docId in docIds) {
+    final doc =
+        await FirebaseFirestore.instance.collection("trials").doc(docId).get();
+    if (doc.exists) {
+      final newTrial = Trial(
+        name: doc["name"],
+        organization: doc["organization"],
+        principal: doc["principal"],
+        description: doc["description"],
+        url: doc["url"],
+        email: doc["email"],
+      );
+      trialsList.add(newTrial);
+    }
+  }
+  return trialsList;
 }

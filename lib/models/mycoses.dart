@@ -11,6 +11,8 @@ class Mycoses {
     required this.pathogenesis,
     required this.diagnosis,
     required this.treatment,
+    required this.references,
+    required this.trials,
   });
 
   final String name;
@@ -22,6 +24,8 @@ class Mycoses {
   final String pathogenesis;
   final String diagnosis;
   final String treatment;
+  final List<dynamic> references;
+  final List<dynamic> trials;
 
   factory Mycoses.fromMap(Map<String, dynamic> map) {
     return Mycoses(
@@ -34,6 +38,8 @@ class Mycoses {
       pathogenesis: map['pathogenesis'] ?? '',
       diagnosis: map['diagnosis'] ?? '',
       treatment: map['treatment'] ?? '',
+      references: map['references'] ?? [],
+      trials: map['trials'] ?? [],
     );
   }
 }
