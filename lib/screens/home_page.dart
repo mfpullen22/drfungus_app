@@ -1,3 +1,4 @@
+import "package:drfungus_app/screens/chat.dart";
 import "package:drfungus_app/screens/datalist.dart";
 import "package:flutter/material.dart";
 import 'package:url_launcher/url_launcher.dart';
@@ -247,7 +248,15 @@ class HomePage extends StatelessWidget {
                                 child: AspectRatio(
                                   aspectRatio: 1.1,
                                   child: ElevatedButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ChatScreen(),
+                                        ),
+                                      );
+                                    },
                                     style: ElevatedButton.styleFrom(
                                       elevation: 4,
                                       backgroundColor: const Color.fromARGB(

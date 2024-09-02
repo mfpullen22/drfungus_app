@@ -1,5 +1,5 @@
 //import 'package:drfungus_app/models/bug.dart';
-import 'package:drfungus_app/providers/firebase_provider.dart';
+import 'package:drfungus_app/services/firebase_service.dart';
 import 'package:drfungus_app/screens/item_details_hub.dart';
 import "package:flutter/material.dart";
 

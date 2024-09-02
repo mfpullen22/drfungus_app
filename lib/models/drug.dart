@@ -1,7 +1,5 @@
 // ignore_for_file: non_constant_identifier_names
 
-import 'package:drfungus_app/data/data.dart';
-
 class Drug {
   const Drug(
       {required this.name,

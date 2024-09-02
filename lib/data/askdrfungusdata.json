@@ -1,0 +1,20 @@
+{
+    "title": "Medications",
+    "section": [
+        {
+            "title": "Voriconazole",
+            "section": [
+                {"title": "Mechanism of Action",
+                "text":"As with all azole antifungal agents, voriconazole works principally by inhibition of cytochrome P450 14a-demethylase. This enzyme is in the sterol biosynthesis pathway that leads from lanosterol to ergosterol. Compared to fluconazole, voriconazole inhibits P45014DM to a greater extend. This inhibition is dose-dependent."},
+                {"title": "Activity",
+                "text":"As with all azole antifungal agents, voriconazole works principally by inhibition of cytochrome P450 14a-demethylase. This enzyme is in the sterol biosynthesis pathway that leads from lanosterol to ergosterol. Compared to fluconazole, voriconazole inhibits P45014DM to a greater extend. This inhibition is dose-dependent."},
+                {"title": "Route and Dosage",
+                "text":"Voriconazole is active following both oral and intravenous administrations. In clinical trials, oral (200 mg twice daily) and intravenous (3 to 6 mg/kg every 12 h) doses have produced favorable response. However, typical doses at individual clinical settings are not yet known. Parenteral administration can be followed by an oral course of voriconazole therapy."},
+                {"title": "Adverse Effects",
+                "text":"Dose-related, transient visual disturbances, skin rash and elevated hepatic enzyme levels have been reported. Visual disturbance is an interesting and extensively investigated side effect of voriconazole. It seems to be due to the blockage of receptor de-excitation by voriconazole. Patients experiencing visual disturbance during voriconazole therapy describe it in various forms; brightness, blurring, light sensitivity, or some changes in color vision. Typically, these visual abnormalities are seen in around 30% of patients receiving voriconazole, starts 30 minutes after the dose, and lasts about 30 minutes."},
+                {"title":"Status",
+                "text":"Clinical use of voriconazole was approved by FDA in May 2002. It was approved for primary treatment of acute invasive aspergillosis and salvage therapy for rare but serious fungal infections caused by the pathogens /Scedosporium apiospermum/ and /Fusarium/ spp.In 2005, voriconazole was also approved for the treatment of invasive candidiasis."}
+            ]
+        }
+    ]
+}
