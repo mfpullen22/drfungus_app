@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_final_fields
+
 import 'package:drfungus_app/services/vectara_service.dart';
 import 'package:flutter/material.dart';
 import "package:drfungus_app/env.dart";
@@ -133,7 +135,7 @@ class _ChatScreenState extends State<ChatScreen> {
         });
       } catch (e) {
         // Handle error and show a generic message
-        print('Error occurred: $e');
+        //print('Error occurred: $e');
         setState(() {
           messages.removeLast(); // Remove the loading indicator
           messages.add({

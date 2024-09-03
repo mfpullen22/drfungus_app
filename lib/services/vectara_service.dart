@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import "package:drfungus_app/env.dart";
+//import "package:drfungus_app/env.dart";
 
 class VectaraService {
   final String apiKey;
@@ -53,28 +53,27 @@ class VectaraService {
     try {
       final response = await http
           .post(url, headers: headers, body: body)
-          .timeout(Duration(seconds: 30));
-      ;
+          .timeout(const Duration(seconds: 30));
 
       if (response.statusCode == 200) {
         final responseData = jsonDecode(response.body);
-        print(responseData);
+        //print(responseData);
         // Parse the response to get the desired text
         if (responseData['answer'] != null &&
             responseData['answer'].isNotEmpty) {
           final answer = responseData["answer"];
           return answer;
         } else {
-          return 'No results found';
+          return 'No results found - Are you connected to the internet?';
         }
       } else {
-        print('Failed to get response: ${response.statusCode}');
-        print('Response body: ${response.body}');
-        return null;
+        //print('Failed to get response: ${response.statusCode}');
+        //print('Response body: ${response.body}');
+        return "Are you connected to the internet?";
       }
     } catch (e) {
-      print('Error occurred: $e');
-      return null;
+      //print('Error occurred: $e');
+      return "Are you connected to the internet?";
     }
   }
 }
