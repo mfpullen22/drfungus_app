@@ -357,3 +357,5 @@ class TestDetailsScreen extends StatelessWidget {
           FormattedText(firestoreString: data.treatment)
       ],
     ); */
+
+

@@ -23,7 +23,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Vectara Chat'),
+        title: const Text('Ask Dr. Fungus'),
       ),
       body: Column(
         children: <Widget>[

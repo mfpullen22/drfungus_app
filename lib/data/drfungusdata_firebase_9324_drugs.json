@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "format": "JSON",
+    "version": "1.1.0",
+    "projectId": "dr-fungus-app",
+    "resourcePath": ["drugs"],
+    "recursive": false,
+    "creationTime": 1725391824,
+    "app": "firefoo"
+  },
+  "data": {
+    "eEOVQnOmdZzVouyV7NxX": {
+      "adverse": "Dose-related, transient visual disturbances, skin rash and elevated hepatic enzyme levels have been reported.\\n\\nVisual disturbance is an interesting and extensively investigated side effect of voriconazole. It seems to be due to the blockage of receptor de-excitation by voriconazole. Patients experiencing visual disturbance during voriconazole therapy describe it in various forms; brightness, blurring, light sensitivity, or some changes in color vision. Typically, these visual abnormalities are seen in around 30% of patients receiving voriconazole, starts 30 minutes after the dose, and lasts about 30 minutes.",
+      "dosage": "Voriconazole is active following both oral and intravenous administrations. In clinical trials, oral (200 mg twice daily) and intravenous (3 to 6 mg\\/kg every 12 h) doses have produced favorable response. However, typical doses at individual clinical settings are not yet known. Parenteral administration can be followed by an oral course of voriconazole therapy.",
+      "keywords": ["voriconazole", "vfend"],
+      "mechanism": "As with all azole antifungal agents, voriconazole works principally by inhibition of cytochrome P450 14a-demethylase. This enzyme is in the sterol biosynthesis pathway that leads from lanosterol to ergosterol. Compared to fluconazole, voriconazole inhibits P45014DM to a greater extend. This inhibition is dose-dependent.",
+      "name": "Voriconazole (Vfend)",
+      "name_lower": "voriconazole (vfend)",
+      "references": [
+        "Arikan, S., M. Lozano-Chiu, V. Paetznick, S. Nangia, and J. H. Rex. 1999. Microdilution susceptibility testing of amphotericin B, itraconazole, and voriconazole against clinical isolates of Aspergillus and Fusarium species. J Clin Microbiol. 37:3946-3951.",
+        "Clancy, C. J., and M. H. Nguyen. 1998. In vitro efficacy and fungicidal activity of voriconazole against Aspergillus and Fusarium species. Eur. J. Clin. Microbiol. Infect. Dis. 17:573-575.",
+        "Espinel-Ingroff, A. 1998. In vitro activities of the new triazole voriconazole (UK-109,496) against opportunistic filamentous and dimorphic fungi and common and emerging yeast pathogens. J. Clin. Microbiol. 36:198-202.",
+        "Johnson, E. M., A. Szekely, and D. W. Warnock. 1998. In-vitro activity of voriconazole, itraconazole and amphotericin B against filamentous fungi. J Antimicrob Chemother. 42:741-745.",
+        "Lozano-Chiu, M., S. Arikan, V. L. Paetznick, E. J. Anaissie, and J. H. Rex. 1999. Optimizing voriconazole susceptibility testing of Candida: Effects of incubation time, endpoint rule, species of Candida, and level of fluconazole susceptibility. J Clin Microbiol. 37:2755-2759.",
+        "McGinnis, M. R., L. Pasarell, D. A. Sutton, A. W. Fothergill, C. R. Cooper, and M. G. Rinaldi. 1998. In vitro activity of voriconazole against selected fungi. Med Mycol. 36:239-242.",
+        "Nguyen, M. H., and C. Y. Yu. 1998. Voriconazole against fluconazole-susceptible and resistant Candida isolates: in-vitro efficacy compared with that of itraconazole and ketoconazole. J. Antimicrob. Chemother. 42:253-256.",
+        "Odds, F. C., S. L. Cheesman, and A. B. Abbott. 1986. Antifungal effects of fluconazole (UK 49858), a new triazole antifungal, in vitro. J. Antimicrob. Chemother. 18:473-478.",
+        "Patterson, T. F. 1999. Role of newer azoles in surgical patients. J Chemotherapy. 11:504-512.",
+        "Sanati, H., P. Belanger, R. Fratti, and M. Ghannoum. 1997. A new triazole, voriconazole (UK-109,496), blocks sterol biosynthesis in Candida albicans and Candida krusei. Antimicrob. Agents Chemother. 41:2492-2496.",
+        "Sheehan, D. J., C. A. Hitchcock, and C. M. Sibley. 1999. Current and emerging azole antifungal agents. Clin. Microbiol. Rev. 12:40-79.",
+        "Wildfeuer, A., H. P. Seidl, I. Paule, and A. Haberreiter. 1998. In vitro evaluation of voriconazole against clinical isolates of yeasts, moulds and dermatophytes in comparison with itraconazole, ketoconazole, amphotericin B and griseofulvin. Mycoses. 41:309-319."
+      ],
+      "status": "Clinical use of voriconazole was approved by FDA in May 2002. It was approved for primary treatment of acute invasive aspergillosis and salvage therapy for rare but serious fungal infections caused by the pathogens /Scedosporium apiospermum/ and /Fusarium/ spp.\\n\\nIn 2005, voriconazole was also approved for the treatment of invasive candidiasis.",
+      "susceptibility": "Voriconazole has favorable in vitro activity against a variety of fungi. These include /Candida/spp., /Aspergillus/ spp., /Cryptococcus neoformans/, /Blastomyces dermatitidis/, /Coccidioides immitis/, /Histoplasma capsulatum/, /Fusarium/ spp., and /Penicillium marneffei/. Voriconazole is generally considered to be a fungistatic agent against /Candida/ spp. and /Cryptococcus neoformans/. It may, however, be fungicidal against /Aspergillus/ spp.\\n\\nIts enhanced activity against fluconazole-resistant /Candida krusei/, /Candida glabrata/, and /Candida guilliermondii/is noteworthy. Some isolates which are resistant to fluconazole and\\/or itraconazole may, expectedly, exhibit cross-resistance to voriconazole. Zygomycetes, such as /Mucor/ spp. and /Rhizomucor/ spp. generate considerably high voriconazole MICs.",
+      "trials": ["Abcg4smgcgJRsoOCqUJn"],
+      "__collections__": {}
+    }
+  }
+}

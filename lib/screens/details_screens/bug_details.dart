@@ -193,7 +193,7 @@ class BugDetailsScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10),
             color: Theme.of(context).colorScheme.secondaryContainer,
             child: SimpleRichText(
-              "Micro/Macroscopic, and Histologic features",
+              "Micro\\/Macroscopic, and Histologic features",
               style: Theme.of(context)
                   .textTheme
                   .titleMedium!
