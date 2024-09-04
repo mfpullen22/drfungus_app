@@ -132,7 +132,7 @@
         "histoDub090324": {
             "clinical": "Histoplasmosis due to /Histoplasma duboisii/ is a mycotic infection primarily involving cutaneous, liver, lung, lymphatic, subcutaneous, and bony tissues. Skin and bone are the most frequently invaded sites. Nodular and ulcerative cutaneous and osteolytic lesions of bone that disseminate or remain localized are the primary clinical characteristics of /Histoplasmosa duboisii/.",
             "diagnosis": "*Histopathology*\nMinimal cellular reaction to the fungi is noted with the exception of large numbers of giant cells (up to 80 µm) and macrophages. Neutrophils are usually present, especially during necrosis. The globose to ovoid, thick-walled yeasts are 7-15 µm (average 10 µm) in diameter and may form rudimentary pseudohyphae consisting of 4 or 5 cells. Large aggregates of yeast cells can be readily seen within giant cells and extracellularly following necrosis of the host tissue. Unlike /Blastomyces dermatitidis/, the blastoconidia are not attached to the parent cell by a broad neck.\n\n*Direct Examination*\nClinical specimens such as tissue are examined in 10% KOH or calcofluor. The large yeast cells should be readily visible. Care must be taken to ensure that /B. dermatitidis/ is not confused with the etiologic agent of histoplasmosis duboisii since they both occur in Africa.\n\n*Isolation*\nInoculate the clinical material onto Inhibitory Mould Agar and\/or yeast extract-phosphate agar and\/or BHI agar with 10% sheep blood and\/or a medium containing cycloheximide. Incubate cultures at 30°C and do not discard until 12 weeks.\n\n*Laboratory Confirmation*\nConfirmation is necessary to ensure that the fungus is not a species of /Chrysosporium/ or /Sepedonium/. This can be accomplished by the mould to yeast conversion, exoantigen technique or DNA probes. The etiologic agents of histoplasmosis capsulati and histoplasmosis duboisii are morphologically identical at 30°C and by DNA testing and exoantigen confirmation.",
-            "epidemiology": "/H. duboisii/, is commonly found in Africa, Asia, and Australia.",
+            "epidemiology": "/H. duboisii/ is commonly found in Africa, Asia, and Australia.",
             "keywords": [
                 "histoplasmosis",
                 "duboisii",
@@ -190,5 +190,6 @@
         }
     }
 }
+
 
 

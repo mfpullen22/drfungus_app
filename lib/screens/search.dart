@@ -65,6 +65,14 @@ class SearchScreenState extends State<SearchScreen> {
       return keywords.any((keyword) => keyword.contains(lowerCaseInput));
     }).toList();
 
+    filteredResults.sort((a, b) {
+      final nameA =
+          (a.data() as Map<String, dynamic>)['name'].toString().toLowerCase();
+      final nameB =
+          (b.data() as Map<String, dynamic>)['name'].toString().toLowerCase();
+      return nameA.compareTo(nameB);
+    });
+
     setState(() {
       query = input;
       searchResults = filteredResults;

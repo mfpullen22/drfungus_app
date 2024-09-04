@@ -108,8 +108,9 @@ class MycosesDetailsScreen extends StatelessWidget {
           ),
         if (data.treatment.isNotEmpty)
           FormattedText(firestoreString: data.treatment),
-        if (data.references.length > 1) const SizedBox(height: 14),
-        if (data.references.length > 1)
+        if (data.references.length > 0 && data.references[0] != "")
+          const SizedBox(height: 14),
+        if (data.references.length > 0 && data.references[0] != "")
           Container(
             width: double.infinity,
             padding: const EdgeInsets.symmetric(horizontal: 10),

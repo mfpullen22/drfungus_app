@@ -94,6 +94,56 @@
       },
       "trials": [""],
       "__collections__": {}
+    },
+    "histobug9324": {
+      "clinical": "/Histoplasma capsulatum/ is the causative agent of a true systemic (endemic) mycosis called histoplasmosis. The spectrum of the disease is wide, varying from an acute benign pulmonary infection to a chronic pulmonary or fatal disseminated disease. Following acquisition of the conidia by inhalation, the lungs are primarily involved. In cases of dissemination of /Histoplasma capsulatum/ var. /capsulatum/ infection, the reticuloendothelial system (RES) is most frequently involved. The fungus resides intracellularly in RES cells. /Histoplasma capsulatum/ may also rarely involve the thyroid glands and may be isolated in fungemia. Unlike var. /capsulatum/, var. /duboisii/ rarely involves the lungs but commonly involves the bones and skin. Var. /duboisii/ is the causative agent of African histoplasmosis.\\n\\nGiven the true systemic nature of histoplasmosis, otherwise healthy individuals are affected. However, dissemination and a fatal course are more common in the immunocompromised and elderly. Chronic cavitary histoplasmosis is most commonly observed in individuals with underlying pulmonary disease.",
+      "description": "/Histoplasma/ is a thermally dimorphic fungus found in nature. Soil contaminated with bird droppings or excrements of bats is the common natural habitat for Histoplasma. Although it is claimed to exist worldwide, tropical areas are where this fungus is more frequently encountered. It is endemic in the Tennessee-Ohio-Mississippi river basins.",
+      "features": "*Histopathology*\\nIntracellular budding yeast cells are typical. It should be differentiated from the other intracellular dimorphic fungus, /Penicillium marneffei/. The yeast cells of /P. marneffei/ divide by fission, but not by budding. /Histoplasma capsulatum/ predominates at the central portion of the lesions. Thus, the selection of the tissue section to be excised for histopathologic and mycologic examination is of particular significance.\\n\\n*Macroscopic Features*\\nBeing a thermally dimorphic fungus, /Histoplasma capsulatum/ grows in mold form at 25°C, and in yeast form at 37°C. Below are the macroscopic characteristics at varying temperatures and for both varieties.\\n\\n_At 25°C_\\nColonies are slow growing and granular to cottony in appearance. The color is white initially and usually becomes buff brown with age. The colonies are not sensitive to cycloheximide in the culture media. From the reverse, a yellow or yellowish orange color may be observed. While these features are best observed on Sabouraud dextrose agar (SDA), brain heart infusion agar (BHIA) enhances growth more efficiently.\\n\\n_At 37°C_\\nCreamy, slowly growing, moist and yeast-like colonies are formed. This phase is observed in infected tissues and in vitro on enriched media, such as BHIA containing 5-10% blood.\\n\\n*Microscopic Features*\\n_At 25°C_\\nHyphae are septate and hyaline. /Histoplasma capsulatum/ produces hyphae-like conidiophores which arise at right angles to the parent hyphae. It has both macro- and microconidia. Macroconidia are tuberculate, thick-walled, round, unicellular, hyaline, large and often have fingerlike projections on the surface. These macroconidia are also referred to as tuberculochlamydospores or macroaleurioconidia. Microconidia (microaleurioconidia) are unicellular, hyaline and round, with a smooth or rough wall.\\n\\n_At 37°C_\\nNarrow-based, ovoid, budding yeast cells are formed. Yeasts of var. capsulatum are smaller than (2-4 µm) those of var. duboisii (12-15 µm).\\n\\nFor definitive identification of the fungus, yeast-to-mould conversion should be demonstrated. Antigen detection in clinical samples offers a rapid way for diagnosis of histoplasmosis.",
+      "keywords": ["histoplasma"],
+      "name": "Histoplasma species",
+      "name_lower": "histoplasma species",
+      "precautions": "Isolates of /Histoplasma/ must be handled with caution in a biological safety cabinet.",
+      "references": [
+        "Akpuaka, F. C., H. C. Gugnani, and L. M. Iregbulam. 1998. African histoplasmosis: report of two patients treated with amphotericin B and ketoconazole. Mycoses. 41:363-364.",
+        "Bauder, B., A. Kubber-Heiss, T. Steineck, E. S. Kuttin, and L. Kaufman. 2000. Granulomatous skin lesions due to histoplasmosis in a badger (Meles meles) in Austria. Med Mycol. 38:249-253.",
+        "Collier, L., A. Balows, and M. Sussman. 1998. Topley & Wilson’s Microbiology and Microbial Infections, 9th ed, vol. 4. Arnold, London, Sydney, Auckland, New York.",
+        "Darling, S. T. 1909. The morphology of the parasite (Histoplasma capsulatum) and the lesions of histoplasmosis, a fatal disease of tropical America. J. Exp. Med. 11:515-530.",
+        "Drouhet, E., and B. Dupont. 1983. Laboratory and clinical assessment of ketoconazole in deep-seated mycoses. Am. J. Med. 74 (Suppl. 1b):30-47.",
+        "Espinel-Ingroff, A. 1998. Comparison of in vitro activities of the new triazole SCH56592 and the echinocandins MK-0991 (L-743,872) and LY303366 against opportunistic filamentous and dimorphic fungi and yeasts. J Clin Microbiol. 36:2950-2956.",
+        "Farina, C., F. Vailati, A. Manisco, and A. Goglio. 1999. Fungaemia survey: a 10-year experience in Bergamo, Italy. Mycoses. 42:543-548.",
+        "Fojtasek, M. F., M. B. Kleiman, P. Connolly-Stringfield, R. Blair, and L. J. Wheat. 1994. The Histoplasma capsulatum antigen assay in disseminated histoplasmosis in children. Pediatric Infectious Disease Journal. 13:801-805.",
+        "Goldani, L. Z., C. Klock, A. Diehl, A. C. Monteiro, and A. L. Maia. 2000. Histoplasmosis of the thyroid. J Clin Microbiol. 38:3890-3891.",
+        "Gugnani, H. C., and F. Muotoe-Okafor. 1998. African histoplasmosis: a review. Rev. Iberoam. Micol. 14:155-159.",
+        "Kappe, R. 1999. Antifungal activity of the new azole UK-109, 496 (voriconazole). Mycoses. 42:83-86.",
+        "Kohler, S., L. J. Wheat, P. Connolly, C. Schnizlein-Bick, M. Durkin, M. Smedema, J. Goldberg, and E. Brizendine. 2000. Comparison of the echinocandin caspofungin with amphotericin B for treatment of histoplasmosis following pulmonary challenge in a murine model. Antimicrob. Agents Chemother. 44:1850-1854.",
+        "Larone, D. H. 1995. Medically Important Fungi – A Guide to Identification, 3rd ed. ASM Press, Washington, D.C.",
+        "Li, R. K., M. A. Ciblak, N. Nordoff, L. Pasarell, D. W. Warnock, and M. R. McGinnis. 2000. In vitro activities of voriconazole, itraconazole, and amphotericin B against Blastomyces dermatitidis, Coccidioides immitis and Histoplasma capsulatum. Antimicrob. Agents Chemother. 44:1734-1736.",
+        "Lortholary, O., D. W. Denning, and B. Dupont. 1999. Endemic mycoses: a treatment update. J Antimicrob Chemother. 43:321-331.",
+        "Norris, S., J. Wheat, D. McKinsey, D. Lancaster, B. Katz, J. Black, M. Driks, R. Baker, K. Israel, D. Traeger, S. Moriarity, J. Fraiz, D. Webb, and T. Slama. 1994. Prevention of relapse of histoplasmosis with fluconazole in patients with acquired immunodeficiency syndrome. Am. J. Med. 96:504-508.",
+        "Sebghati, T. S., J. T. Engle, and W. E. Goldman. 2000. Intracellular parasitism by Histoplasma capsulatum: Fungal virulence and calcium dependence. Science. 290:1368-1372.",
+        "St-Germain, G., and R. Summerbell. 1996. Identifying Filamentous Fungi – A Clinical Laboratory Handbook, 1st ed. Star Publishing Company, Belmont, California.",
+        "Sutton, D. A., A. W. Fothergill, and M. G. Rinaldi (ed.). 1998. Guide to Clinically Significant Fungi, 1st ed. Williams & Wilkins, Baltimore.",
+        "Wheat, J., P. Marichal, H. Vanden Bossche, A. L. Monte, and P. Connolly. 1997. Hypothesis on the mechanisms of resistance to fluconazole in Histoplasma capsulatum. Antimicrob. Agents Chemother. 41:410-414.",
+        "Wheat, J., S. MaWhinney, R. Hafner, D. McKinsey, D. Chen, A. Korzun, K. J. Shakan, P. Johnson, R. Hamill, D. Bamberger, P. Pappas, J. Stansell, S. Koletar, K. Squires, R. A. Larsen, T. Cheung, N. Hyslop, K. K. Lai, D. Schneider, C. Kauffman, M. Saag, W. Dismukes, W. Powderly, and National Institute of allergy and Infectious Diseases Acquired Immunodeficiency Syndrome Clinical Trials Group and Myocses Study Group. 1997. Treatment of histoplasmosis with fluconazole in patients with acquired immunodeficiency syndrome. Am. J. Med. 103:223-232.",
+        "Wheat, L. J., P. Connolly-Stringfield, R. B. Kohler, P. T. Frame, and M. R. Gupta. 1989. Histoplasma capsulatum polysaccharide antigen detection in diagnosis and management of disseminated histoplasmosis in patients with acquired immunodeficiency syndrome. Am. J. Med. 87:396-400."
+      ],
+      "species": "The genus /Histoplasma/ contains one species, /Histoplasma capsulatum/. /Histoplasma capsulatum/ has two varieties: /Histoplasma capsulatum/ var. /capsulatum/ and /Histoplasma capsulatum/ var. /duboisii/. It has a teleomorph referred to as /Ajellomyces capsulatus/.",
+      "susceptibility": "Data on in vitro activity of /Histoplasma capsulatum/ are yet limited. The NCCLS antifungal susceptibility testing methods have not been standardized for testing the activity of this fungus. Amphotericin B, voriconazole, itraconazole, and posaconazole in general yield relatively low MICs for /Histoplasma capsulatum/. Fluconazole generally appears active, but resistance may develop. The echinocandins, caspofungin and anidulafungin have relatively higher MICs, and one in vivo study found caspofungin to have little activity.\\n\\nAmphotericin B, itraconazole and fluconazole are currently used in treatment of histoplasmosis. Fluconazole is less active than itraconazole and is a second-line agent. Ketoconazole is also a second-line drug due to the availability of safer and more efficacious alternatives.",
+      "taxonomy": {
+        "family": "Onygenaceae",
+        "genus": "Ajellomyces (Histoplasma)",
+        "kingdom": "Fungi",
+        "order": "Onygenales",
+        "phylum": "Ascomycota",
+        "subphylum": "Ascomycotina"
+      },
+      "trials": ["Abcg4smgcgJRsoOCqUJn"],
+      "__collections__": {}
     }
   }
 }
+
+
+
+
+
