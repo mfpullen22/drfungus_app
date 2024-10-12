@@ -13,135 +13,20 @@ class BugDetailsScreen extends StatelessWidget {
     return Column(
       children: [
         if (data.trials[0] != "") ActiveTrialsListTile(data: data),
-        if (data.taxonomy["kingdom"].isNotEmpty)
+        if (data.description.isEmpty)
           Container(
+            height: MediaQuery.of(context).size.height * 0.6,
             width: double.infinity,
             padding: const EdgeInsets.symmetric(horizontal: 10),
-            color: Theme.of(context).colorScheme.secondaryContainer,
-            child: Text(
-              "Taxonomic Classification",
+            //color: Theme.of(context).colorScheme.secondaryContainer,
+            child: SimpleRichText(
+              "No data available for this bug at this time. Coming soon!",
               style: Theme.of(context)
                   .textTheme
                   .titleMedium!
-                  .copyWith(color: Colors.white),
+                  .copyWith(color: Colors.black),
             ),
           ),
-        if (data.taxonomy["kingdom"].isNotEmpty)
-          Row(
-            children: [
-              SimpleRichText(
-                "Kingdom: ",
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium!
-                    .copyWith(fontWeight: FontWeight.bold, fontSize: 16),
-              ),
-              SimpleRichText(
-                data.taxonomy["kingdom"],
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium!
-                    .copyWith(fontSize: 16),
-              ),
-            ],
-          ),
-        if (data.taxonomy["phylum"].isNotEmpty)
-          Row(
-            children: [
-              SimpleRichText(
-                "Phylum: ",
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium!
-                    .copyWith(fontWeight: FontWeight.bold, fontSize: 16),
-              ),
-              SimpleRichText(
-                data.taxonomy["phylum"],
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium!
-                    .copyWith(fontSize: 16),
-              ),
-            ],
-          ),
-        if (data.taxonomy["subphylum"].isNotEmpty)
-          Row(
-            children: [
-              SimpleRichText(
-                "Subphylum: ",
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium!
-                    .copyWith(fontWeight: FontWeight.bold, fontSize: 16),
-              ),
-              SimpleRichText(
-                data.taxonomy["subphylum"],
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium!
-                    .copyWith(fontSize: 16),
-              ),
-            ],
-          ),
-        if (data.taxonomy["order"].isNotEmpty)
-          Row(
-            children: [
-              SimpleRichText(
-                "Order: ",
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium!
-                    .copyWith(fontWeight: FontWeight.bold, fontSize: 16),
-              ),
-              SimpleRichText(
-                data.taxonomy["order"],
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium!
-                    .copyWith(fontSize: 16),
-              ),
-            ],
-          ),
-        if (data.taxonomy["family"].isNotEmpty)
-          Row(
-            children: [
-              SimpleRichText(
-                "Family: ",
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium!
-                    .copyWith(fontWeight: FontWeight.bold, fontSize: 16),
-              ),
-              SimpleRichText(
-                data.taxonomy["family"],
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium!
-                    .copyWith(fontSize: 16),
-              ),
-            ],
-          ),
-        if (data.taxonomy["genus"].isNotEmpty)
-          Row(
-            children: [
-              SimpleRichText(
-                "Genus: ",
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium!
-                    .copyWith(fontWeight: FontWeight.bold, fontSize: 16),
-              ),
-              SimpleRichText(
-                data.taxonomy["genus"],
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium!
-                    .copyWith(fontSize: 16),
-              ),
-              const SizedBox(height: 8),
-            ],
-          ),
-        if (data.taxonomy["kingdom"].isNotEmpty) const SizedBox(height: 14),
         if (data.description.isNotEmpty)
           Container(
             width: double.infinity,
