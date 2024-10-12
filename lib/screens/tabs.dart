@@ -1,6 +1,7 @@
 // ignore_for_file: unused_local_variable
 
 import "package:drfungus_app/screens/search.dart";
+import "package:drfungus_app/screens/test_data_entry.dart";
 import "package:flutter/material.dart";
 import "package:drfungus_app/screens/datalist.dart";
 import "package:drfungus_app/screens/home_page.dart";
@@ -48,11 +49,15 @@ class _TabsScreenState extends State<TabsScreen> {
       );
     } else if (_selectedPageIndex == 4) {
       setState(() {
+        activePageTitle = "Test Data Entry";
+      });
+      activePage = const TestDataEntryScreen();
+/*       setState(() {
         activePageTitle = "Mycoses";
       });
       activePage = const DataListScreen(
         title: "Mycoses",
-      );
+      ); */
     }
 
     return Scaffold(
