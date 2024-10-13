@@ -1,232 +1,105 @@
-import 'package:drfungus_app/widgets/formattedtext.dart';
 import 'package:flutter/material.dart';
-import "package:simple_rich_text/simple_rich_text.dart";
+import 'package:flutter_quill/flutter_quill.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-class TestDetailsScreen extends StatelessWidget {
-  const TestDetailsScreen({required this.data, super.key});
+class DisplayRichTextScreen extends StatefulWidget {
+  final String documentId; // The Firestore document ID to fetch
 
-  final dynamic data;
+  const DisplayRichTextScreen({super.key, required this.documentId});
+
+  @override
+  State<DisplayRichTextScreen> createState() => _DisplayRichTextScreenState();
+}
+
+class _DisplayRichTextScreenState extends State<DisplayRichTextScreen> {
+  QuillController? _controller;
+  bool _isLoading = true;
+  final _focusNode = FocusNode();
+  final _scrollController = ScrollController();
+
+  @override
+  void initState() {
+    super.initState();
+    _fetchDocument();
+  }
+
+  Future<void> _fetchDocument() async {
+    try {
+      // Fetch the document from Firestore
+      DocumentSnapshot doc = await FirebaseFirestore.instance
+          .collection('test')
+          .doc(widget.documentId)
+          .get();
+
+      if (doc.exists && doc.data() != null) {
+        var jsonContent = doc['content'];
+        var document = Document.fromJson(jsonContent);
+
+        // Initialize the QuillController with the fetched document
+        setState(() {
+          _controller = QuillController(
+            document: document,
+            readOnly: true,
+            selection: TextSelection.collapsed(offset: 0),
+          );
+          _isLoading = false;
+        });
+      } else {
+        setState(() {
+          _isLoading = false;
+        });
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Document not found!')),
+        );
+      }
+    } catch (e) {
+      setState(() {
+        _isLoading = false;
+      });
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Failed to load document: $e')),
+      );
+    }
+  }
+
+  @override
+  void dispose() {
+    _focusNode.dispose();
+    _scrollController.dispose();
+    _controller?.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        if (data.description.isNotEmpty)
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            color: Theme.of(context).colorScheme.secondaryContainer,
-            child: SimpleRichText(
-              "Description and Natural Habitats",
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium!
-                  .copyWith(color: Colors.white),
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text(
+          'Display Rich Text',
+        ),
+      ),
+      body: _isLoading
+          ? Center(child: CircularProgressIndicator())
+          : Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: _controller != null
+                  ? QuillEditor.basic(
+                      configurations: const QuillEditorConfigurations(
+                        scrollable: true, // Allow scrolling
+                        padding:
+                            EdgeInsets.all(10), // Add padding around the editor
+                        autoFocus: false, // Don't auto-focus
+                        expands:
+                            false, // Allow manual resizing based on content
+                        showCursor: false,
+                      ),
+                      controller: _controller!,
+                      scrollController: _scrollController,
+                      focusNode: _focusNode,
+                    )
+                  : const Center(child: Text('No content available')),
             ),
-          ),
-        FormattedText(firestoreString: data.description),
-        if (data.description.isNotEmpty) const SizedBox(height: 14),
-        if (data.species.isNotEmpty)
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            color: Theme.of(context).colorScheme.secondaryContainer,
-            child: SimpleRichText(
-              "Species",
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium!
-                  .copyWith(color: Colors.white),
-            ),
-          ),
-        FormattedText(firestoreString: data.species),
-        if (data.species.isNotEmpty) const SizedBox(height: 14),
-        if (data.clinical.isNotEmpty)
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            color: Theme.of(context).colorScheme.secondaryContainer,
-            child: SimpleRichText(
-              "Pathogenicity and Clinical Significance",
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium!
-                  .copyWith(color: Colors.white),
-            ),
-          ),
-        FormattedText(firestoreString: data.clinical),
-        if (data.clinical.isNotEmpty) const SizedBox(height: 14),
-        if (data.features.isNotEmpty)
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            color: Theme.of(context).colorScheme.secondaryContainer,
-            child: SimpleRichText(
-              "Micro/Macroscopic, and Histologic features",
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium!
-                  .copyWith(color: Colors.white),
-            ),
-          ),
-        FormattedText(firestoreString: data.features),
-        if (data.features.isNotEmpty) const SizedBox(height: 14),
-        if (data.precautions.isNotEmpty)
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            color: Theme.of(context).colorScheme.secondaryContainer,
-            child: SimpleRichText(
-              "Laboratory Precautions",
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium!
-                  .copyWith(color: Colors.white),
-            ),
-          ),
-        FormattedText(firestoreString: data.precautions),
-        if (data.precautions.isNotEmpty) const SizedBox(height: 14),
-        if (data.susceptibility.isNotEmpty)
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            color: Theme.of(context).colorScheme.secondaryContainer,
-            child: SimpleRichText(
-              "Susceptibility Patterns",
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium!
-                  .copyWith(color: Colors.white),
-            ),
-          ),
-        FormattedText(firestoreString: data.susceptibility),
-        if (data.references.isNotEmpty) const SizedBox(height: 14),
-        if (data.references.isNotEmpty)
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            color: Theme.of(context).colorScheme.secondaryContainer,
-            child: SimpleRichText(
-              "References",
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium!
-                  .copyWith(color: Colors.white),
-            ),
-          ),
-        for (var ref in data.references)
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 4.0),
-            child: Text(
-              ref,
-              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    fontSize: 12,
-                  ),
-            ),
-          ),
-      ],
     );
   }
 }
-
-/* Column(
-      children: [
-        if (data.mycology.isNotEmpty)
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            color: Theme.of(context).colorScheme.secondaryContainer,
-            child: SimpleRichText(
-              "Mycology",
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium!
-                  .copyWith(color: Colors.white),
-            ),
-          ),
-        if (data.mycology.isNotEmpty)
-          FormattedText(firestoreString: data.mycology),
-        if (data.mycology.isNotEmpty) const SizedBox(height: 14),
-        if (data.epidemiology.isNotEmpty)
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            color: Theme.of(context).colorScheme.secondaryContainer,
-            child: SimpleRichText(
-              "Epidemiology",
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium!
-                  .copyWith(color: Colors.white),
-            ),
-          ),
-        if (data.epidemiology.isNotEmpty)
-          FormattedText(firestoreString: data.epidemiology),
-        if (data.epidemiology.isNotEmpty) const SizedBox(height: 14),
-        if (data.pathogenesis.isNotEmpty)
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            color: Theme.of(context).colorScheme.secondaryContainer,
-            child: SimpleRichText(
-              "Pathogenesis",
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium!
-                  .copyWith(color: Colors.white),
-            ),
-          ),
-        if (data.pathogenesis.isNotEmpty)
-          FormattedText(firestoreString: data.pathogenesis),
-        if (data.pathogenesis.isNotEmpty) const SizedBox(height: 14),
-        if (data.clinical.isNotEmpty)
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            color: Theme.of(context).colorScheme.secondaryContainer,
-            child: SimpleRichText(
-              "Clinical Manifestations",
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium!
-                  .copyWith(color: Colors.white),
-            ),
-          ),
-        if (data.clinical.isNotEmpty)
-          FormattedText(firestoreString: data.clinical),
-        if (data.clinical.isNotEmpty) const SizedBox(height: 14),
-        if (data.diagnosis.isNotEmpty)
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            color: Theme.of(context).colorScheme.secondaryContainer,
-            child: SimpleRichText(
-              "Diagnosis",
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium!
-                  .copyWith(color: Colors.white),
-            ),
-          ),
-        if (data.diagnosis.isNotEmpty)
-          FormattedText(firestoreString: data.diagnosis),
-        if (data.diagnosis.isNotEmpty) const SizedBox(height: 14),
-        if (data.treatment.isNotEmpty)
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            color: Theme.of(context).colorScheme.secondaryContainer,
-            child: SimpleRichText(
-              "Treatment",
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium!
-                  .copyWith(color: Colors.white),
-            ),
-          ),
-        if (data.treatment.isNotEmpty)
-          FormattedText(firestoreString: data.treatment)
-      ],
-    ); */
-
-

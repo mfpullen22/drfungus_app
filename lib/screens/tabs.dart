@@ -1,5 +1,6 @@
 // ignore_for_file: unused_local_variable
 
+import "package:drfungus_app/screens/details_screens/test_details.dart";
 import "package:drfungus_app/screens/search.dart";
 import "package:drfungus_app/screens/test_data_entry.dart";
 import "package:flutter/material.dart";
@@ -49,9 +50,10 @@ class _TabsScreenState extends State<TabsScreen> {
       );
     } else if (_selectedPageIndex == 4) {
       setState(() {
-        activePageTitle = "Test Data Entry";
+        activePageTitle = "Test Data Screen";
       });
-      activePage = const TestDataEntryScreen();
+      activePage =
+          const DisplayRichTextScreen(documentId: "HkhdKE3PeZfYpGoVypyC");
 /*       setState(() {
         activePageTitle = "Mycoses";
       });
