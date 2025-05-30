@@ -1,5 +1,6 @@
 import "package:drfungus_app/screens/chat.dart";
 import "package:drfungus_app/screens/datalist.dart";
+import "package:drfungus_app/screens/test_data_screen.dart";
 import "package:flutter/material.dart";
 import 'package:url_launcher/url_launcher.dart';
 
@@ -252,7 +253,7 @@ class HomePage extends StatelessWidget {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                            const ChatScreen(),
+                                            const TestDataScreen(),
                                       ),
                                     );
                                   },
@@ -274,7 +275,7 @@ class HomePage extends StatelessWidget {
                                             color:
                                                 Color.fromRGBO(21, 40, 77, 1),
                                             size: 48),
-                                        Text("Ask Dr. Fungus",
+                                        Text("Test Screen",
                                             style: TextStyle(
                                                 fontSize: 18,
                                                 color: Color.fromRGBO(
