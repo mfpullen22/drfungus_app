@@ -15,7 +15,6 @@ Future<List<Bug>> getBugs() async {
       name: doc["name"],
       name_lower: doc["name_lower"],
       keywords: doc["keywords"],
-      taxonomy: doc["taxonomy"],
       description: doc["description"],
       species: doc["species"],
       clinical: doc["clinical"],
