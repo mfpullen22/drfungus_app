@@ -24,7 +24,7 @@ class TestDataScreen extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
-            print('ERROR: ${snapshot.error}');
+            //print('ERROR: ${snapshot.error}');
             return const Center(child: Text("Error loading bugs"));
           } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
             return const Center(child: Text("No bugs found"));

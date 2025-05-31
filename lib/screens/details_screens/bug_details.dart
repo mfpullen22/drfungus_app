@@ -1,5 +1,5 @@
 import 'package:drfungus_app/widgets/activetrials.dart';
-import 'package:drfungus_app/widgets/formattedtext.dart';
+import 'package:drfungus_app/widgets/markdown_section.dart';
 import 'package:flutter/material.dart';
 import "package:simple_rich_text/simple_rich_text.dart";
 
@@ -27,7 +27,8 @@ class BugDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        FormattedText(firestoreString: data.description),
+        //FormattedText(firestoreString: data.description),
+        MarkdownSection(context: context, text: data.description),
         if (data.description.isNotEmpty) const SizedBox(height: 14),
         if (data.species.isNotEmpty)
           Container(
@@ -42,7 +43,7 @@ class BugDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        FormattedText(firestoreString: data.species),
+        MarkdownSection(context: context, text: data.species),
         if (data.species.isNotEmpty) const SizedBox(height: 14),
         if (data.clinical.isNotEmpty)
           Container(
@@ -57,7 +58,7 @@ class BugDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        FormattedText(firestoreString: data.clinical),
+        MarkdownSection(context: context, text: data.clinical),
         if (data.clinical.isNotEmpty) const SizedBox(height: 14),
         if (data.features.isNotEmpty)
           Container(
@@ -72,7 +73,7 @@ class BugDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        FormattedText(firestoreString: data.features),
+        MarkdownSection(context: context, text: data.features),
         if (data.features.isNotEmpty) const SizedBox(height: 14),
         if (data.precautions.isNotEmpty)
           Container(
@@ -87,7 +88,7 @@ class BugDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        FormattedText(firestoreString: data.precautions),
+        MarkdownSection(context: context, text: data.precautions),
         if (data.precautions.isNotEmpty) const SizedBox(height: 14),
         if (data.susceptibility.isNotEmpty)
           Container(
@@ -102,7 +103,7 @@ class BugDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        FormattedText(firestoreString: data.susceptibility),
+        MarkdownSection(context: context, text: data.susceptibility),
         if (data.references.length > 0 && data.references[0] != "")
           const SizedBox(height: 14),
         if (data.references.length > 0 && data.references[0] != "")

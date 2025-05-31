@@ -1,4 +1,3 @@
-import "package:drfungus_app/screens/chat.dart";
 import "package:drfungus_app/screens/datalist.dart";
 import "package:drfungus_app/screens/test_data_screen.dart";
 import "package:flutter/material.dart";
@@ -13,7 +12,7 @@ void _launchURL(String url) async {
 }
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
