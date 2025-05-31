@@ -28,7 +28,7 @@ class BugDetailsScreen extends StatelessWidget {
             ),
           ),
         //FormattedText(firestoreString: data.description),
-        MarkdownSection(context: context, text: data.description),
+        MarkdownSection(data.description),
         if (data.description.isNotEmpty) const SizedBox(height: 14),
         if (data.species.isNotEmpty)
           Container(
@@ -43,7 +43,7 @@ class BugDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        MarkdownSection(context: context, text: data.species),
+        MarkdownSection(data.species),
         if (data.species.isNotEmpty) const SizedBox(height: 14),
         if (data.clinical.isNotEmpty)
           Container(
@@ -58,7 +58,7 @@ class BugDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        MarkdownSection(context: context, text: data.clinical),
+        MarkdownSection(data.clinical),
         if (data.clinical.isNotEmpty) const SizedBox(height: 14),
         if (data.features.isNotEmpty)
           Container(
@@ -73,7 +73,7 @@ class BugDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        MarkdownSection(context: context, text: data.features),
+        MarkdownSection(data.features),
         if (data.features.isNotEmpty) const SizedBox(height: 14),
         if (data.precautions.isNotEmpty)
           Container(
@@ -88,7 +88,7 @@ class BugDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        MarkdownSection(context: context, text: data.precautions),
+        MarkdownSection(data.precautions),
         if (data.precautions.isNotEmpty) const SizedBox(height: 14),
         if (data.susceptibility.isNotEmpty)
           Container(
@@ -103,7 +103,7 @@ class BugDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        MarkdownSection(context: context, text: data.susceptibility),
+        MarkdownSection(data.susceptibility),
         if (data.references.length > 0 && data.references[0] != "")
           const SizedBox(height: 14),
         if (data.references.length > 0 && data.references[0] != "")

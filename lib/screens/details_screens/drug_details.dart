@@ -1,6 +1,6 @@
 import "package:drfungus_app/screens/datalist.dart";
 import "package:drfungus_app/widgets/activetrials.dart";
-import "package:drfungus_app/widgets/formattedtext.dart";
+import "package:drfungus_app/widgets/markdown_section.dart";
 import "package:flutter/material.dart";
 import "package:simple_rich_text/simple_rich_text.dart";
 
@@ -42,7 +42,7 @@ class DrugDetailsScreen extends StatelessWidget {
                 .copyWith(color: Colors.white),
           ),
         ),
-        FormattedText(firestoreString: data.name),
+        MarkdownSection(data.name),
         const SizedBox(height: 14),
         if (data.mechanism.isNotEmpty)
           Container(
@@ -57,7 +57,7 @@ class DrugDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        FormattedText(firestoreString: data.mechanism),
+        MarkdownSection(data.mechanism),
         if (data.mechanism.isNotEmpty) const SizedBox(height: 14),
         if (data.susceptibility.isNotEmpty)
           Container(
@@ -72,7 +72,7 @@ class DrugDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        FormattedText(firestoreString: data.susceptibility),
+        MarkdownSection(data.susceptibility),
         if (data.susceptibility.isNotEmpty) const SizedBox(height: 14),
         if (data.dosage.isNotEmpty)
           Container(
@@ -87,7 +87,7 @@ class DrugDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        FormattedText(firestoreString: data.dosage),
+        MarkdownSection(data.dosage),
         if (data.dosage.isNotEmpty) const SizedBox(height: 14),
         if (data.adverse.isNotEmpty)
           Container(
@@ -102,7 +102,7 @@ class DrugDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        FormattedText(firestoreString: data.adverse),
+        MarkdownSection(data.adverse),
         if (data.adverse.isNotEmpty) const SizedBox(height: 14),
         if (data.status.isNotEmpty)
           Container(
@@ -117,7 +117,7 @@ class DrugDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        FormattedText(firestoreString: data.status),
+        MarkdownSection(data.status),
         if (data.references.length > 0 && data.references[0] != "")
           const SizedBox(height: 14),
         if (data.references.length > 0 && data.references[0] != "")

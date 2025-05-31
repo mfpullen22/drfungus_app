@@ -40,28 +40,25 @@ class TestBugDetailsScreen extends StatelessWidget {
               if (data.description.isNotEmpty)
                 sectionHeader(context, "Description and Natural Habitats"),
               if (data.description.isNotEmpty)
-                MarkdownSection(context: context, text: data.description),
+                MarkdownSection(data.description),
               if (data.species.isNotEmpty) sectionHeader(context, "Species"),
-              if (data.species.isNotEmpty)
-                MarkdownSection(context: context, text: data.species),
+              if (data.species.isNotEmpty) MarkdownSection(data.species),
               if (data.clinical.isNotEmpty)
                 sectionHeader(
                     context, "Pathogenicity and Clinical Significance"),
-              if (data.clinical.isNotEmpty)
-                MarkdownSection(context: context, text: data.clinical),
+              if (data.clinical.isNotEmpty) MarkdownSection(data.clinical),
               if (data.features.isNotEmpty)
                 sectionHeader(
                     context, "Micro/Macroscopic, and Histologic features"),
-              if (data.features.isNotEmpty)
-                MarkdownSection(context: context, text: data.features),
+              if (data.features.isNotEmpty) MarkdownSection(data.features),
               if (data.precautions.isNotEmpty)
                 sectionHeader(context, "Laboratory Precautions"),
               if (data.precautions.isNotEmpty)
-                MarkdownSection(context: context, text: data.precautions),
+                MarkdownSection(data.precautions),
               if (data.susceptibility.isNotEmpty)
                 sectionHeader(context, "Susceptibility Patterns"),
               if (data.susceptibility.isNotEmpty)
-                MarkdownSection(context: context, text: data.susceptibility),
+                MarkdownSection(data.susceptibility),
               if (data.references.length > 0 && data.references[0] != "")
                 sectionHeader(context, "References"),
               if (data.references.length > 0 && data.references[0] != "")

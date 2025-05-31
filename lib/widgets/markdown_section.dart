@@ -3,9 +3,9 @@ import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MarkdownSection extends StatelessWidget {
-  const MarkdownSection({required this.context, required this.text, super.key});
+  const MarkdownSection(this.text, {super.key});
 
-  final BuildContext context;
+  //final BuildContext context;
   final String text;
 
   @override
