@@ -1,4 +1,4 @@
-import 'package:drfungus_app/widgets/formattedtext.dart';
+import 'package:drfungus_app/widgets/markdown_section.dart';
 import "package:flutter/material.dart";
 import "package:simple_rich_text/simple_rich_text.dart";
 import 'package:url_launcher/url_launcher.dart';
@@ -55,7 +55,7 @@ class TrialDetailsScreen extends StatelessWidget {
                 .copyWith(color: Colors.white),
           ),
         ),
-        FormattedText(firestoreString: data.name),
+        MarkdownSection(data.name),
         const SizedBox(height: 8),
         Container(
           width: double.infinity,
@@ -69,8 +69,7 @@ class TrialDetailsScreen extends StatelessWidget {
                 .copyWith(color: Colors.white),
           ),
         ),
-        FormattedText(
-            firestoreString: "${data.organization} - ${data.principal}"),
+        MarkdownSection("${data.organization} - ${data.principal}"),
         const SizedBox(height: 8),
         Container(
           width: double.infinity,
@@ -84,7 +83,7 @@ class TrialDetailsScreen extends StatelessWidget {
                 .copyWith(color: Colors.white),
           ),
         ),
-        FormattedText(firestoreString: data.description),
+        MarkdownSection(data.description),
         const SizedBox(height: 8),
         Container(
           width: double.infinity,
@@ -304,5 +303,3 @@ Column(
       ],
     );
     */
-
-    

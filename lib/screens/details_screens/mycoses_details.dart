@@ -1,5 +1,5 @@
 import 'package:drfungus_app/widgets/activetrials.dart';
-import 'package:drfungus_app/widgets/formattedtext.dart';
+import 'package:drfungus_app/widgets/markdown_section.dart';
 import 'package:flutter/material.dart';
 import "package:simple_rich_text/simple_rich_text.dart";
 
@@ -26,8 +26,7 @@ class MycosesDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        if (data.mycology.isNotEmpty)
-          FormattedText(firestoreString: data.mycology),
+        if (data.mycology.isNotEmpty) MarkdownSection(data.mycology),
         if (data.mycology.isNotEmpty) const SizedBox(height: 14),
         if (data.epidemiology.isNotEmpty)
           Container(
@@ -42,8 +41,7 @@ class MycosesDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        if (data.epidemiology.isNotEmpty)
-          FormattedText(firestoreString: data.epidemiology),
+        if (data.epidemiology.isNotEmpty) MarkdownSection(data.epidemiology),
         if (data.epidemiology.isNotEmpty) const SizedBox(height: 14),
         if (data.pathogenesis.isNotEmpty)
           Container(
@@ -58,8 +56,7 @@ class MycosesDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        if (data.pathogenesis.isNotEmpty)
-          FormattedText(firestoreString: data.pathogenesis),
+        if (data.pathogenesis.isNotEmpty) MarkdownSection(data.pathogenesis),
         if (data.pathogenesis.isNotEmpty) const SizedBox(height: 14),
         if (data.clinical.isNotEmpty)
           Container(
@@ -74,8 +71,7 @@ class MycosesDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        if (data.clinical.isNotEmpty)
-          FormattedText(firestoreString: data.clinical),
+        if (data.clinical.isNotEmpty) MarkdownSection(data.clinical),
         if (data.clinical.isNotEmpty) const SizedBox(height: 14),
         if (data.diagnosis.isNotEmpty)
           Container(
@@ -90,8 +86,7 @@ class MycosesDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        if (data.diagnosis.isNotEmpty)
-          FormattedText(firestoreString: data.diagnosis),
+        if (data.diagnosis.isNotEmpty) MarkdownSection(data.diagnosis),
         if (data.diagnosis.isNotEmpty) const SizedBox(height: 14),
         if (data.treatment.isNotEmpty)
           Container(
@@ -106,8 +101,7 @@ class MycosesDetailsScreen extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-        if (data.treatment.isNotEmpty)
-          FormattedText(firestoreString: data.treatment),
+        if (data.treatment.isNotEmpty) MarkdownSection(data.treatment),
         if (data.references.length > 0 && data.references[0] != "")
           const SizedBox(height: 14),
         if (data.references.length > 0 && data.references[0] != "")
