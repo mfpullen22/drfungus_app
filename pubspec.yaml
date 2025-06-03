@@ -43,6 +43,7 @@ dependencies:
   http: ^1.2.2
   flutter_launcher_icons: ^0.14.3
   flutter_markdown_plus: ^1.0.3
+  azlistview: ^2.0.0
 
 dev_dependencies:
   flutter_test:

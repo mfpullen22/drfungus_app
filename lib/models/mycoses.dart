@@ -1,7 +1,8 @@
 // ignore_for_file: non_constant_identifier_names
+import 'package:azlistview/azlistview.dart';
 
-class Mycoses {
-  const Mycoses({
+class Mycoses with ISuspensionBean {
+  Mycoses({
     required this.name,
     required this.name_lower,
     required this.keywords,
@@ -13,9 +14,10 @@ class Mycoses {
     required this.treatment,
     required this.references,
     required this.trials,
-  });
+  }) : tag = name[0].toUpperCase();
 
   final String name;
+  String tag;
   final String name_lower;
   final List<dynamic> keywords;
   final String mycology;
@@ -42,4 +44,6 @@ class Mycoses {
       trials: map['trials'] ?? [],
     );
   }
+  @override
+  String getSuspensionTag() => tag;
 }

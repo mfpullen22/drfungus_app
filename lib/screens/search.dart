@@ -3,7 +3,7 @@
 import 'package:drfungus_app/models/bug.dart';
 import 'package:drfungus_app/models/drug.dart';
 import 'package:drfungus_app/models/mycoses.dart';
-import 'package:drfungus_app/screens/item_details_hub.dart';
+import 'package:drfungus_app/screens/item_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 

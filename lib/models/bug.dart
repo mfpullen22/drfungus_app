@@ -1,7 +1,8 @@
 // ignore_for_file: non_constant_identifier_names
+import 'package:azlistview/azlistview.dart';
 
-class Bug {
-  const Bug(
+class Bug with ISuspensionBean {
+  Bug(
       {required this.name,
       required this.name_lower,
       required this.keywords,
@@ -12,9 +13,11 @@ class Bug {
       required this.precautions,
       required this.susceptibility,
       required this.references,
-      required this.trials});
+      required this.trials})
+      : tag = name[0].toUpperCase();
 
   final String name;
+  String tag;
   final String name_lower;
   final List<dynamic> keywords;
   final String description;
@@ -41,4 +44,7 @@ class Bug {
       trials: map['trials'] ?? [],
     );
   }
+
+  @override
+  String getSuspensionTag() => tag;
 }
