@@ -61,16 +61,18 @@ class _DataListScreenState extends State<DataListScreen> {
         itemCount: letters.length,
         itemBuilder: (context, index) {
           final letter = letters[index];
+          final hasData = _letterIndexMap.containsKey(letter);
+
           return GestureDetector(
-            onTap: () => _scrollToLetter(letter),
+            onTap: hasData ? () => _scrollToLetter(letter) : null,
             child: Container(
               alignment: Alignment.center,
               width: 30,
               margin: const EdgeInsets.symmetric(horizontal: 4),
               child: Text(
                 letter,
-                style: const TextStyle(
-                  color: Colors.white,
+                style: TextStyle(
+                  color: hasData ? Colors.white : Colors.grey,
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
