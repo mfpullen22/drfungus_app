@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MarkdownSection extends StatelessWidget {
   const MarkdownSection(this.text, {super.key});
@@ -36,6 +37,14 @@ class MarkdownSection extends StatelessWidget {
           blockSpacing: 14,
           textAlign: WrapAlignment.start,
         ),
+        onTapLink: (text, href, title) async {
+          if (href != null && await canLaunchUrl(Uri.parse(href))) {
+            await launchUrl(Uri.parse(href),
+                mode: LaunchMode.externalApplication);
+          } else {
+            debugPrint('Could not launch $href');
+          }
+        },
       ),
     );
   }
